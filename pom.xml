@@ -37,5 +37,6 @@
 		<module>learn-springmvc</module>
 		<module>learn-lucene</module>
 		<module>learn-solr</module>
+		<module>learn-redis</module>
 	</modules>
 </project>
