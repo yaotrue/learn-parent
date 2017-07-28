@@ -13,30 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yaotrue.web.controller;
+package com.yaotrue;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
- * 2017年7月26日 上午12:43:44
+ * 2017年7月28日 下午10:18:32
  */
-@Controller
-public class IndexController extends BaseController {
-	
-	private static final Logger LOG = LoggerFactory.getLogger(IndexController.class);
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath*:yaotrue-spring.xml"})
+public class BaseTest {
 
-	@Value("${test.encrypt}")
-	private String testEncrypt;
-	
-	@RequestMapping("/")
-	public String indexPage(){
-		LOG.debug("into index page");
-		LOG.debug("properties encrypt text:{}",testEncrypt);
-		return "index";
-	}
 }
