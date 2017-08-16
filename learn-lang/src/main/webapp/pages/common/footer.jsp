@@ -5,27 +5,27 @@
 
 <div class="footer">
     <div class="back-top event-top">
-        <img src="resources/images/index/top.png" height="40" />
+        <img src="${base }/resources/images/index/top.png" height="40" />
     </div>
     <div class="con">
         <span>&nbsp;</span>
         <div class="detial">
             <ul>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-news.png" /><spring:message code="navbar.news"/>
+                    <a href="${base }/"><img src="${base }/resources/images/index/icon-news.png" /><spring:message code="navbar.news"/>
                     </a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-campaign.png" /><spring:message code="navbar.project"/></a>
+                    <a href="${base }/"><img src="${base }/resources/images/index/icon-campaign.png" /><spring:message code="navbar.project"/></a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-date.png" /><spring:message code="navbar.richeng"/></a>
+                    <a href="${base }/"><img src="${base }/resources/images/index/icon-date.png" /><spring:message code="navbar.richeng"/></a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-aboutus.png" /><spring:message code="navbar.aboutus"/></a>
+                    <a href="${base }/"><img src="${base }/resources/images/index/icon-aboutus.png" /><spring:message code="navbar.aboutus"/></a>
                 </li>
                 <li class="m0">
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-contactus.png" /><spring:message code="footer.contactus"/></a>
+                    <a href="${base }/"><img src="${base }/resources/images/index/icon-contactus.png" /><spring:message code="footer.contactus"/></a>
                 </li>
             </ul>
         </div>

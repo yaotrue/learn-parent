@@ -5,11 +5,11 @@
 
 <div class="nav-bar">
     <ul>
-        <li class="current"><a href="${pageContext.request.contextPath }/"><spring:message code="navbar.index"/></a></li>
-        <li><a href="${pageContext.request.contextPath }/"><spring:message code="navbar.news"/></a></li>
-        <li><a href="${pageContext.request.contextPath }/"><spring:message code="navbar.project"/></a></li>
-        <li><a href="${pageContext.request.contextPath }/"><spring:message code="navbar.richeng"/></a></li>
-        <li><a href="${pageContext.request.contextPath }/"><spring:message code="navbar.aboutus"/></a></li>
-        <li><a href="${pageContext.request.contextPath }/"><spring:message code="navbar.joinus"/></a></li>
+        <li class="current"><a href="${base }/"><spring:message code="navbar.index"/></a></li>
+        <li><a href="${base }/"><spring:message code="navbar.news"/></a></li>
+        <li><a href="${base }/"><spring:message code="navbar.project"/></a></li>
+        <li><a href="${base }/"><spring:message code="navbar.richeng"/></a></li>
+        <li><a href="${base }/"><spring:message code="navbar.aboutus"/></a></li>
+        <li><a href="${base }/"><spring:message code="navbar.joinus"/></a></li>
     </ul>
 </div>
