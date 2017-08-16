@@ -15,6 +15,9 @@
  */
 package com.yaotrue.jasypt;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig;
@@ -45,8 +48,13 @@ public class JasyptTest extends BaseTest {
 	
 	@Test
 	public void testEncrypt(){
-		String text = "yaotrue";
-		LOG.debug("text:{} encrypt after:{}",text,ENCRYPTOR.encrypt(text));
+		List<String> encryptStrList = new ArrayList<>();
+		encryptStrList.add("test");
+		
+		int i=0;
+		for(String encryptStr : encryptStrList){
+			LOG.debug("index:{} encrypt after:{}",i++,ENCRYPTOR.encrypt(encryptStr));
+		}
 	}
 	
 	@Test
