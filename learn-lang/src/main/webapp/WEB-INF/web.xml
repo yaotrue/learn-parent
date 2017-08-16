@@ -45,6 +45,24 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
+	<!--********************************** servlet ********************************** -->
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.jpg</url-pattern>
+		<url-pattern>*.png</url-pattern>
+		<url-pattern>*.gif</url-pattern>
+		<url-pattern>*.ico</url-pattern>
+		<url-pattern>*.js</url-pattern>
+		<url-pattern>*.css</url-pattern>
+		<url-pattern>*.html</url-pattern>
+		<url-pattern>*.swf</url-pattern>
+		<url-pattern>*.xml</url-pattern>
+		<url-pattern>*.mp3</url-pattern>
+		<url-pattern>*.wma</url-pattern>
+		<url-pattern>*.wav</url-pattern>
+		<url-pattern>*.amr</url-pattern>
+	</servlet-mapping>
+	
 	<session-config>
 		<session-timeout>60</session-timeout>
 	</session-config>

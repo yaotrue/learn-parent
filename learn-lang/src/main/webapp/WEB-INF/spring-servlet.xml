@@ -38,7 +38,7 @@
  
     <!-- don't handle the static resource -->
     <!-- <mvc:default-servlet-handler /> -->
-    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <mvc:resources mapping="/resources/**" location="/" />
 	<mvc:resources mapping="/favicon.ico" location="/favicon.ico" />
  
     <!-- if you use annotation you must configure following setting -->
