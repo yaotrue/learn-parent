@@ -111,7 +111,14 @@ public class JedisTest {
         jedis.rpush("java framework","struts");  
         jedis.rpush("java framework","hibernate"); 
         System.out.println(jedis.lrange("java framework",0,-1));
-    }  
+        
+        jedis.del("java framework");
+    }
+    
+    @Test
+    public void testNewsAdd(){
+    	
+    }
     
     /** 
      * jedis操作Set 
