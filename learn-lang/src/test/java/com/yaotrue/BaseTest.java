@@ -16,8 +16,10 @@
 package com.yaotrue;
 
 import org.junit.runner.RunWith;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
@@ -25,6 +27,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath*:yaotrue-spring.xml"})
+@Transactional
+@Rollback
 public class BaseTest {
 
 }
