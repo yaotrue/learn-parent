@@ -1,37 +1,35 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.yaotrue.learn</groupId>
-    <artifactId>learn-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <artifactId>learn-mybatis</artifactId>
-  <packaging>war</packaging>
-  <name>learn-mybatis Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-	<dependency>
-	    <groupId>org.mybatis</groupId>
-	    <artifactId>mybatis</artifactId>
-	    <version>3.4.4</version>
-	</dependency>
-	
-	<dependency>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
 		<groupId>com.yaotrue.learn</groupId>
-		<artifactId>learn-webbase</artifactId>
+		<artifactId>learn-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
-	</dependency>
-	
-	<!-- <dependency>
-		<groupId>mysql</groupId>
-	  	<artifactId>mysql-connector-java</artifactId>
-	  	<version>5.1.35</version>
-	</dependency> -->
-  </dependencies>
-  <build>
-    <finalName>learn-mybatis</finalName>
-  </build>
+	</parent>
+	<artifactId>learn-mybatis</artifactId>
+	<packaging>war</packaging>
+	<name>learn-mybatis Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.yaotrue.learn</groupId>
+			<artifactId>learn-webbase</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			<version>5.1.35</version> </dependency> -->
+	</dependencies>
+	<build>
+		<finalName>learn-mybatis</finalName>
+	</build>
 </project>
