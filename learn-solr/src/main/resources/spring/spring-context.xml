@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- <aop:aspectj-autoproxy /> -->
+	<!-- 采用注释的方式配置bean -->
+	<context:annotation-config />
+	<!-- 配置要扫描的包 -->
+	<!-- <context:component-scan base-package=""></context:component-scan> -->
+	
+	<bean id="solrServer" class="org.apache.solr.client.solrj.impl.CloudSolrClient">
+		<constructor-arg index="0">
+			<value>localhost:2181,localhost:2182,localhost:2183</value>
+		</constructor-arg>
+		<property name="defaultCollection" value="i.t" />
+		<property name="zkClientTimeout" value="20000" />
+		<property name="zkConnectTimeout" value="50000" />
+	</bean>
+</beans>  
+ 
