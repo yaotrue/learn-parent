@@ -35,7 +35,6 @@
 
     <div id="main" class="content">
     	<%@include file="/pages/common/navbar.jsp"%>
-        
         <div class="flexslider event-kv">
             <ul class="slides">
                 <li>

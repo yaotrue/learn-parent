@@ -12,20 +12,20 @@
         <div class="detial">
             <ul>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-news.png" />峰会新闻
+                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-news.png" /><spring:message code="navbar.news"/>
                     </a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-campaign.png" />峰会项目</a>
+                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-campaign.png" /><spring:message code="navbar.project"/></a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-date.png" />峰会日程</a>
+                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-date.png" /><spring:message code="navbar.richeng"/></a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-aboutus.png" />关于我们</a>
+                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-aboutus.png" /><spring:message code="navbar.aboutus"/></a>
                 </li>
                 <li class="m0">
-                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-contactus.png" />联系我们</a>
+                    <a href="${pageContext.request.contextPath }/"><img src="resources/images/index/icon-contactus.png" /><spring:message code="footer.contactus"/></a>
                 </li>
             </ul>
         </div>
