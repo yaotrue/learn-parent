@@ -38,12 +38,9 @@ public class NewManagerTest extends BaseTest {
 	@Test
 	public void testNews(){
 		News news = new News();
-		news.setAuthor("环境");
 		news.setBigImgUri("爱上看到");
-		news.setContent("爱仕达开始的");
 		news.setSmallImgUri("气温已经感觉");
 		news.setStatus(News.STATUS_NEW);
-		news.setTitle("啊时间的卡号多少");
 		news.setType(News.TYPE_NEWS);
 		
 		newsManager.save(news);
@@ -54,7 +51,7 @@ public class NewManagerTest extends BaseTest {
 		News news = newsManager.getByPrimaryKey(1L);
 		LOG.info("result:{}",JSON.toJSONString(news));
 		
-		news.setAuthor("张三");
+		news.setStatus(News.STATUS_DELETE);
 		newsManager.update(news);
 	}
 	

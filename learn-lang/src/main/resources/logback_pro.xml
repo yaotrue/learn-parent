@@ -16,8 +16,21 @@
 		</encoder>
 	</appender>
 	
+	<appender name="LOG_FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/home/yaotrue/logs/zys/logFile-%d{yyyyMMdd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder charset="UTF-8"
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			 <pattern>%d{MMdd HH:mm:ss} %-5level \(%F:%L\) %method\(\) - %m%n</pattern>  
+		</encoder>
+	</appender>
+	
 	<!-- 日志输出级别 -->
-	<root level="debug">
-		<appender-ref ref="STDOUT" />
+	<root level="WARN">
+		<appender-ref ref="LOG_FILE" />
 	</root>
 </configuration>

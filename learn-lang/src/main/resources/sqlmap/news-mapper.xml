@@ -5,22 +5,16 @@
 <mapper namespace="com.yaotrue.mapper.NewsMapper">
   	<insert id="save" parameterType="News" useGeneratedKeys="true" keyProperty="id">
   		INSERT INTO t_ma_news (
-			title,
-			content,
 			small_img_uri,
 			big_img_uri,
-			author,
 			create_time,
 			type,
 			STATUS
 		)
 		VALUES
 			(
-				#{title},
-				#{content},
 				#{smallImgUri},
 				#{bigImgUri},
-				#{author},
 				NOW(),
 				#{type},
 				#{status}
@@ -39,11 +33,8 @@
  		update
  			t_ma_news
  		set
-  			title = #{title},
-  			content = #{content},
   			small_img_uri = #{smallImgUri},
   			big_img_uri = #{bigImgUri},
-  			author = #{author},
   			type = #{type},
   			status = #{status}
   		where id =#{id}

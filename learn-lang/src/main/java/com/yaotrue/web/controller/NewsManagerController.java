@@ -22,10 +22,14 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.yaotrue.manager.NewsManager;
 import com.yaotrue.model.News;
+import com.yaotrue.web.command.NewCommand;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a> 2017年8月16日 下午1:45:32
@@ -41,5 +45,22 @@ public class NewsManagerController extends BaseController {
 		List<News> news = newsManager.findByPageAndType(null, 0, 20);
 		model.addAttribute("news", news);
 		return "/admin/index";
+	}
+
+	@RequestMapping(value = "/admin/addNew")
+	public String addNew(HttpServletRequest request, Model model) {
+		return "/admin/edit-new";
+	}
+
+	@RequestMapping(value = "/admin/editNew")
+	public String editNew(@RequestParam("newId") Long newId, HttpServletRequest request, Model model) {
+		model.addAttribute("new", newsManager.getByPrimaryKey(newId));
+		return "/admin/edit-new";
+	}
+
+	@RequestMapping(value = "/admin/saveNew", method = RequestMethod.POST)
+	public String saveNew(@ModelAttribute NewCommand newCommand) {
+
+		return "json";
 	}
 }

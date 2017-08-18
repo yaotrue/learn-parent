@@ -13,27 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yaotrue.manager;
+package com.yaotrue.web.command;
 
-import java.util.List;
-
-import com.yaotrue.model.News;
+import java.io.Serializable;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
- * 2017年8月15日 下午9:35:43
+ * 2017年8月16日 下午9:15:05
  */
-public interface NewsManager {
+public class BaseCommand implements Serializable {
 
-	News save(News news);
-	
-	News update(News news);
-	
-	void delete(Long id);
-	
-	News getByPrimaryKey(Long id);
-	
-	List<News> findNewsByTypeAndCount(Byte type,Integer count);
-	
-	List<News> findByPageAndType(Byte type,Integer start,Integer pageSize);
+	/**
+	 * <code>{@value}</code>
+	 */
+	private static final long serialVersionUID = 6878114738264710696L;
+
 }

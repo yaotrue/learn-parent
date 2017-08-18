@@ -13,40 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yaotrue.model;
-
-import java.io.Serializable;
-import java.util.Date;
+package com.yaotrue.web.command;
 
 /**
- * @author <a href="mailto:yaotrue@163.com">yaotrue</a> 2017年8月15日 下午9:21:04
+ * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
+ * 2017年8月16日 下午9:15:32
  */
-public class News implements Serializable {
+public class NewCommand extends BaseCommand {
 
 	/**
 	 * <code>{@value}</code>
 	 */
-	private static final long serialVersionUID = 2512686477738409024L;
+	private static final long serialVersionUID = 6732505915393715598L;
 	
-	/**类型：新闻*/
-	public static final Byte TYPE_NEWS = 1;
-	
-	/**类型：博客*/
-	public static final Byte TYPE_BLOG = 2;
-	
-	/**状态：新建*/
-	public static final Byte STATUS_NEW = 1;
-	
-	/**状态：删除*/
-	public static final Byte STATUS_DELETE = 2;
-
 	private Long id;
+	
+	private String title;
+
+	private String content;
 
 	private String smallImgUri;
 
 	private String bigImgUri;
 
-	private Date createTime;
+	private String author;
 
 	private Byte type;
 
@@ -65,6 +55,36 @@ public class News implements Serializable {
 	 */
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * @param title
+	 *            the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	/**
+	 * @return the content
+	 */
+	public String getContent() {
+		return content;
+	}
+
+	/**
+	 * @param content
+	 *            the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	/**
@@ -98,18 +118,18 @@ public class News implements Serializable {
 	}
 
 	/**
-	 * @return the createTime
+	 * @return the author
 	 */
-	public Date getCreateTime() {
-		return createTime;
+	public String getAuthor() {
+		return author;
 	}
 
 	/**
-	 * @param createTime
-	 *            the createTime to set
+	 * @param author
+	 *            the author to set
 	 */
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 	/**

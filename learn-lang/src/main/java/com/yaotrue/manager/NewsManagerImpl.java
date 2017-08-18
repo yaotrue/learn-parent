@@ -39,16 +39,19 @@ public class NewsManagerImpl implements NewsManager {
 	 * @see com.yaotrue.manager.NewsManager#save(com.yaotrue.model.News)
 	 */
 	@Override
-	public void save(News news) {
+	public News save(News news) {
 		newsMapper.save(news);
+		
+		return news;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.yaotrue.manager.NewsManager#update(com.yaotrue.model.News)
 	 */
 	@Override
-	public void update(News news) {
+	public News update(News news) {
 		newsMapper.update(news);
+		return news;
 	}
 
 	/* (non-Javadoc)

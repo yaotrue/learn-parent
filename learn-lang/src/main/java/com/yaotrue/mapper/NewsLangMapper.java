@@ -13,27 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yaotrue.manager;
+package com.yaotrue.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.yaotrue.model.News;
+import com.yaotrue.model.NewsLang;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
- * 2017年8月15日 下午9:35:43
+ * 2017年8月15日 下午9:32:00
  */
-public interface NewsManager {
+public interface NewsLangMapper {
 
-	News save(News news);
+	void save(NewsLang newsLang);
 	
-	News update(News news);
+	void batchSave(List<NewsLang> newsLangs);
 	
-	void delete(Long id);
+	void update(NewsLang newsLang);
 	
-	News getByPrimaryKey(Long id);
+	void delete(@Param("id") Long id);
 	
-	List<News> findNewsByTypeAndCount(Byte type,Integer count);
+	void deleteByNewId(@Param("newId") Long newId);
 	
-	List<News> findByPageAndType(Byte type,Integer start,Integer pageSize);
+	NewsLang getByPrimaryKey(@Param("id") Long id);
+	
+	NewsLang getByNewIdAndLang(@Param("newId") Long newId,@Param("lang")String lang);
+	
+	List<News> findByNewId(@Param("newId") Long newId);
+	
+	
 }

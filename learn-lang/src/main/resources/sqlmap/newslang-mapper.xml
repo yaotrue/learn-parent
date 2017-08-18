@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaotrue.mapper.NewsLangMapper">
+  	<insert id="save" parameterType="NewsLang" useGeneratedKeys="true" keyProperty="id">
+  		INSERT INTO t_ma_news_lang (
+			title,
+			content,
+			author,
+			create_time,
+			lang
+		)
+		VALUES
+			(
+				#{title},
+				#{content},
+				#{author},
+				NOW(),
+				#{lang}
+			)
+  	</insert>
+  	
+  	<insert id="batchSave" parameterType="NewsLang" useGeneratedKeys="true" keyProperty="id">
+  		INSERT INTO t_ma_news_lang (
+			title,
+			content,
+			author,
+			create_time,
+			lang
+		)
+		VALUES
+			<foreach collection="newsLangs" item="newsLang" index="index" separator=",">
+			(
+				#{newsLang.title},
+				#{newsLang.content},
+				#{newsLang.author},
+				NOW(),
+				#{newsLang.lang}
+			)
+			</foreach>
+  	</insert>
+  	
+  	<update id="update" parameterType="NewsLang">
+ 		UPDATE
+ 			t_ma_news_lang
+ 		SET
+  			title = #{title},
+  			content = #{content},
+  			author = #{author}
+  		WHERE id = #{id}
+  	</update>
+  	
+  	<delete id="delete">
+  		DELETE
+		FROM
+			t_ma_news_lang
+		WHERE
+			id = #{id}
+  	</delete>
+  	
+  	<delete id="deleteByNewId">
+  		DELETE
+		FROM
+			t_ma_news_lang
+		WHERE
+			new_id = #{newId}
+  	</delete>
+  	
+  	<select id="getByPrimaryKey" resultType="NewsLang">
+  		SELECT
+			*
+		FROM
+			t_ma_news_lang
+		WHERE
+			id = #{id}
+  	</select>
+  	
+  	<select id="getByNewIdAndLang" resultType="NewsLang">
+  		SELECT
+			*
+		FROM
+			t_ma_news_lang
+		WHERE
+			new_id = #{newId}
+		AND lang = #{lang}
+  	</select>
+  	
+  	<select id="findByNewId" resultType="NewsLang">
+  		SELECT
+			*
+		FROM
+			t_ma_news_lang
+		WHERE
+			new_id = #{newId}
+  	</select>
+</mapper>
