@@ -58,7 +58,9 @@
 .clearfix{ /*兼容 IE*/
     zoom: 1;
 }
-
+.banner-site{
+	position: relative;
+}
 /* logo */
 .logo{
 	position: relative;
@@ -97,8 +99,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 20;
-	height: 55px;
-	
+	height: 55px;	
 }
 .nav-bar ul{
 	font-size: 0;

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="${base }/resources/css/index.css" />
     <script src="${base }/resources/js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="${base }/resources/js/jquery.flexslider-min.js" type="text/javascript"></script>
-    <script src="${base }/resources/js/index.js" type="text/javascript"></script>
+    <script src="${base }/resources/js/common.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function() {
              $('.flexslider').flexslider({
@@ -34,47 +34,49 @@
     <%@include file="/pages/common/logo.jsp"%>
 
     <div id="main" class="content">
-    	<%@include file="/pages/common/navbar.jsp"%>
-        <div class="flexslider event-kv">
-            <ul class="slides">
-                <li>
-                    <img src="${base }/resources/images/index/kv-1.png" />
-                    <div class="txt-info">
-                        <div>
-                            <h4>世界风云变化 中国如何应对</h4>
-                            <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="${base }/resources/images/index/kv-2.png" />
-                    <div class="txt-info">
-                        <div>
-                            <h4>世界风云变化 中国如何应对</h4>
-                            <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="${base }/resources/images/index/kv-3.png" />
-                    <div class="txt-info">
-                        <div>
-                            <h4>世界风云变化 中国如何应对</h4>
-                            <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="${base }/resources/images/index/kv-4.png" />
-                    <div class="txt-info">
-                        <div>
-                            <h4>世界风云变化 中国如何应对</h4>
-                            <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+    	<div class="banner-site">
+			<%@include file="/pages/common/navbar.jsp"%>
+	        <div class="flexslider event-kv">
+	           <ul class="slides">
+	               <li>
+	                   <img src="${base }/resources/images/index/kv-1.jpg" />
+	                   <div class="txt-info">
+	                       <div>
+	                           <h4>世界风云变化 中国如何应对</h4>
+	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
+	                       </div>
+	                   </div>
+	               </li>
+	               <li>
+	                   <img src="${base }/resources/images/index/kv-2.jpg" />
+	                   <div class="txt-info">
+	                       <div>
+	                           <h4>世界风云变化 中国如何应对</h4>
+	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
+	                       </div>
+	                   </div>
+	               </li>
+	               <li>
+	                   <img src="${base }/resources/images/index/kv-3.jpg" />
+	                   <div class="txt-info">
+	                       <div>
+	                           <h4>世界风云变化 中国如何应对</h4>
+	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
+	                       </div>
+	                   </div>
+	               </li>
+	               <li>
+	                   <img src="${base }/resources/images/index/kv-4.jpg" />
+	                   <div class="txt-info">
+	                       <div>
+	                           <h4>世界风云变化 中国如何应对</h4>
+	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
+	                       </div>
+	                   </div>
+	               </li>
+	           </ul>
+	       </div>
+		</div>
 
         <div class="summit-news model">
             <div class="tit">
