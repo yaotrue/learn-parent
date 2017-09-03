@@ -2,6 +2,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 /* Drop Tables */
 
+DROP TABLE IF EXISTS t_ma_news_image;
 DROP TABLE IF EXISTS t_ma_news_lang;
 DROP TABLE IF EXISTS t_ma_news;
 
@@ -14,13 +15,23 @@ DROP TABLE IF EXISTS t_ma_news;
 CREATE TABLE t_ma_news
 (
 	id bigint NOT NULL AUTO_INCREMENT COMMENT 'ID',
-	small_img_uri varchar(300) COMMENT '小图URI',
-	big_img_uri varchar(300) COMMENT '大图URI',
 	create_time timestamp COMMENT '创建时间',
 	type tinyint COMMENT '类型',
 	status tinyint COMMENT '状态',
 	PRIMARY KEY (id)
 ) COMMENT = '新闻、博客表';
+
+
+-- 新闻、博客关联图片
+CREATE TABLE t_ma_news_image
+(
+	id bigint NOT NULL AUTO_INCREMENT COMMENT 'ID',
+	news_id bigint COMMENT '新闻、博客ID',
+	sort_no int COMMENT '排序号',
+	pic_urii varchar(500) COMMENT '图片URI',
+	create_time timestamp COMMENT '创建时间',
+	PRIMARY KEY (id)
+) COMMENT = '新闻、博客关联图片';
 
 
 -- 新闻、博客多语言表
