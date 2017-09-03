@@ -19,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -34,9 +35,40 @@ public class IndexController extends BaseController {
 	private String testEncrypt;
 	
 	@RequestMapping("/")
-	public String indexPage(){
+	public String indexPage(Model model){
 		LOG.debug("into index page");
 		LOG.debug("properties encrypt text:{}",testEncrypt);
+		model.addAttribute("navbar", "index");
 		return "index";
+	}
+	
+	@RequestMapping("/about-us.htm")
+	public String aboutUs(Model model){
+		model.addAttribute("navbar", "aboutus");
+		return "about-us";
+	}
+	
+	@RequestMapping("/join-us.htm")
+	public String joinUs(Model model){
+		model.addAttribute("navbar", "joinus");
+		return "join-us";
+	}
+	
+	@RequestMapping("/project.htm")
+	public String project(Model model){
+		model.addAttribute("navbar", "project");
+		return "project";
+	}
+	
+	@RequestMapping("/schedule.htm")
+	public String schedule(Model model){
+		model.addAttribute("navbar", "schedule");
+		return "schedule";
+	}
+	
+	@RequestMapping("/news.htm")
+	public String news(Model model){
+		model.addAttribute("navbar", "news");
+		return "news";
 	}
 }

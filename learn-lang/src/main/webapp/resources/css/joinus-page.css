@@ -1,0 +1,207 @@
+@charset"utf-8";
+.none{
+	display: none !important;
+    visibility: hidden;
+}
+.block{
+	display: block !important;
+    visibility: hidden;
+}
+/* 标题 */
+.model .tit{
+	position: relative;
+	text-align: center;
+	margin: 37px auto 52px;
+}
+.model .tit h5{
+	display: inline-block;
+	font-size: 64px;
+	color: #000;
+	padding: 14px 12px;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.model .tit  span{
+	display: block;
+	height: 1px;
+	background: #d8d8d8;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -0.5px;
+	z-index: 0;
+}
+// .model .tit p{
+// 	text-align: center;
+// 	font-size: 24px;
+// 	color: #333333;
+// 	margin-top: 5px;
+// }
+/* 内容部分 */
+#main {
+    position: relative;
+}
+.page-img img{
+	width: 100%;
+}
+.news-box{
+	max-width: 1370px;
+	padding
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+.jionus-news p{
+	font-size: 24px;
+	color: #333333;
+	line-height: 30px;
+	padding-bottom: 28px;
+	letter-spacing: 0;
+}
+.jionus-banner{
+	margin: 58px 0 136px;
+}
+.jionus-left{
+	width: 26.5%;
+	vertical-align: top;
+    display: inline-block;
+    height: auto;
+    position: relative;
+
+}
+.jionus-left .pages-left-info p{
+	font-family: "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	font-size: 24px;
+	color: #333333;
+	width: 268px;
+	border-bottom: 1px solid #333333;
+	padding-bottom:8px;
+	margin-bottom: 28px;
+}
+
+.jionus-left .pages-left-info ul li{
+	font-size: 24px;
+	color: #151515;
+	letter-spacing: 0;
+	line-height: 36px;
+	margin-bottom: 36px;
+
+}
+.jionus-left .pages-left-info ul li span{
+	display: block;
+}
+.jionus-left .pages-left-info ul li a{
+	color: #151515;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.jionus-left .pages-left-info ul li a.is-active{
+	color: #A11E25;
+}
+.jionus-left .pages-left-info ul li a img{
+	display: none;
+	position: absolute;
+	left: -14px;
+	top: 7px;
+}
+.jionus-right{
+	width: 71.4%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 6.5%;
+	box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.jionus-box{
+	margin-bottom: 92px;
+}
+.job-content .job-classify{
+	font-size: 24px;
+}
+.job-classify span{
+	padding: 0 10px;
+}
+.job-require1 div {
+	margin-bottom: 28px;
+}
+.job-require1 div p{
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 8px;
+}
+.job-title{
+	position: relative;
+    text-align: left;
+    margin: 38px auto 38px;
+}
+.job-title b{
+	display: block;
+	height: 1px;
+	background: #d8d8d8;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -1px;
+	z-index: 0;
+}
+.job-title span{
+	font-size: 24px;
+	color: #333333;
+	position: relative;
+	background: #fff;
+	z-index: 11;
+	padding-right: 15px;
+}
+.news-box-max{
+	width: 100%;
+	background: url(../images/page/ju-bgpic.png) no-repeat;
+	padding: 46px 0 116px;
+}
+.apply-for-details{
+	max-width:1276px;
+	margin: 0 auto;
+}
+.apply-for-details h5{
+	font-size: 24px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 38px;
+}
+.apply-for-details>div{
+	margin: 46px 0 90px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 38px;
+	font-size: 24px
+}
+.apply-for-details div.marg-min>p{
+	padding-left: 32px;
+}
+.apply-for-details>div p{
+	position: relative;
+	padding-left:57px;
+}
+.apply-for-details div p.p-marg{
+	margin-bottom: 36px;
+	padding: 0;
+}
+.apply-for-details>div p span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 15px;
+}

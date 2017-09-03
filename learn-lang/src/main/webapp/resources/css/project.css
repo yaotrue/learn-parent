@@ -1,0 +1,197 @@
+@charset "utf-8";
+body{
+	min-width: 1200px;
+}
+.banner{
+	position: relative;
+	width: 100%;
+}
+.banner img{
+	width: 100%;
+}
+
+.about-summit .tit{
+	margin-bottom: 80px;
+}
+.about-summit .tit > div {
+	position: relative;
+	text-align: center;
+	margin: 39px auto 0;
+}
+.about-summit .tit h5 {
+	display: inline-block;
+	font-size: 64px;
+	color: #000;
+	padding: 15px;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+.about-summit .tit span{
+	display: block;
+	height: 1px;
+	background: #d8d8d8;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -0.5px;
+	z-index: 0;
+}
+.about-summit .tit p{
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+}
+.myaccount-inner {
+	max-width: 1280px;
+	margin: 0 auto 170px;
+}
+.myaccount-lf{
+	float: left;
+	width: 298px;
+	margin-right: -298px;
+	display: inline-block;
+	position: relative;
+}
+.myaccount-lf h5{
+	font-size: 24px;
+	color: #333333;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #333;
+	margin-bottom: 16px;
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+}
+.myaccount-lf ul li.current a{
+	color: #A11E25;
+
+}
+.myaccount-lf ul li a{
+	display: block;
+	padding: 17px 0;
+	font-size: 24px;
+	color: #151515;
+	line-height: 36px;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+}
+.myaccount-lf ul li a img{
+	display: none;
+	position: absolute;
+	left: -14px;
+	top: 27px;
+}
+.myaccount-rt{
+	float: left;
+	display: inline-block;
+	width: 100%;
+}
+.myaccount-rt>div{
+	margin-left: 364px;
+}
+.myaccount-rt .ft-box>div{
+	position: relative;
+	margin-bottom: 72px;
+}
+.myaccount-rt .ft-box>div .ft-title{
+	position: absolute;
+    width: 96%;
+    left: 50%;
+    margin-left: -48%;
+    background: #fff;
+    bottom: -84px;
+    padding: 20px;
+    text-align: justify;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 111;
+}
+.myaccount-rt .ft-box>div .ft-title p{
+	font-size: 38px;
+	color: #000000;
+	letter-spacing: 0;
+	text-align: center;
+}
+.myaccount-rt .ft-box>div .ft-title span{
+	display: block;
+	font-size: 12px;
+	color: #8E8E8E;
+	letter-spacing: 0;
+	text-align: center;
+	margin: 24px 0;
+}
+.myaccount-rt .ft-content{
+	padding: 5px 77px 94px;
+	border-bottom: 1px solid #8E8E8E;
+}
+.myaccount-rt .ft-content p{
+	font-size: 14px;
+	color: #333333;
+	letter-spacing: 0;
+	line-height: 20px;
+	margin-bottom: 18px;
+}
+.myaccount-inner .fh-interview ul li {
+    font-size: 12px;
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.myaccount-inner .fh-interview ul li.fir {
+    padding-right: 5.3%;
+
+}
+.myaccount-inner .fh-interview ul li.thir {
+    padding-left: 5.3%;
+	float: right;
+}
+.myaccount-inner .fh-interview  ul li>div {
+    position: relative;
+    margin-bottom: 48px;
+}
+.myaccount-inner .fh-interview ul li>div .detail {
+    position: absolute;
+    width: 94%;
+    left: 50%;
+    margin-left: -47%;
+    background: #fff;
+    bottom: -145px;
+    padding: 20px;
+    text-align: justify;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.myaccount-inner .fh-interview .detail p {
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+    font-size: 38px;
+    color: #000;
+    text-align: left;
+    line-height: 54px;
+    margin-bottom:18px;
+    min-height: 126px;
+}
+.none{
+	display: none;
+}
+.ft-box .flexslider .flex-next,.ft-box .flexslider .flex-prev{
+	display: none!important;
+}
+.ft-box .flex-control-paging{
+	display: none!important;
+}
+@media screen and (max-width:1440px){
+	.myaccount-inner{
+		max-width: 1224px;
+	}
+}
