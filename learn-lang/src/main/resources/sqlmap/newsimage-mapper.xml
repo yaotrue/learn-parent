@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaotrue.mapper.NewsImageMapper">
+  	<insert id="save" parameterType="NewsImage" useGeneratedKeys="true" keyProperty="id">
+  		INSERT INTO t_ma_news_image (
+			news_id,
+			pic_uri,
+			create_time,
+			sort_no
+		)
+		VALUES
+			(
+				#{newsId},
+				#{picUri},
+				NOW(),
+				#{sortNo}
+			)
+  	</insert>
+  	
+  	<insert id="batchSave" parameterType="NewsImage" useGeneratedKeys="true" keyProperty="id">
+  		INSERT INTO t_ma_news_image (
+			news_id,
+			pic_uri,
+			create_time,
+			sort_no
+		)
+		VALUES
+			<foreach collection="newsImages" item="newsImage" index="index" separator=",">
+			(
+				#{newsImage.newsId},
+				#{newsImage.picUri},
+				NOW(),
+				#{newsImage.sortNo}
+			)
+			</foreach>
+  	</insert>
+  	
+  	<update id="update" parameterType="NewsImage">
+ 		UPDATE
+ 			t_ma_news_image
+ 		SET
+  			sort_no = #{sortNo},
+  			pic_uri = #{picUri}
+  		WHERE id = #{id}
+  	</update>
+  	
+  	<delete id="delete">
+  		DELETE
+		FROM
+			t_ma_news_image
+		WHERE
+			id = #{id}
+  	</delete>
+  	
+  	<delete id="deleteByNewId">
+  		DELETE
+		FROM
+			t_ma_news_image
+		WHERE
+			new_id = #{newId}
+  	</delete>
+  	
+  	<select id="getByPrimaryKey" resultType="NewsImage">
+  		SELECT
+			*
+		FROM
+			t_ma_news_image
+		WHERE
+			id = #{id}
+  	</select>
+  	
+  	<select id="findByNewId" resultType="NewsImage">
+  		SELECT
+			*
+		FROM
+			t_ma_news_image
+		WHERE
+			new_id = #{newId}
+  	</select>
+</mapper>

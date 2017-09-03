@@ -38,8 +38,6 @@ public class NewManagerTest extends BaseTest {
 	@Test
 	public void testNews(){
 		News news = new News();
-		news.setBigImgUri("爱上看到");
-		news.setSmallImgUri("气温已经感觉");
 		news.setStatus(News.STATUS_NEW);
 		news.setType(News.TYPE_NEWS);
 		

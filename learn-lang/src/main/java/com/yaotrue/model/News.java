@@ -42,10 +42,6 @@ public class News implements Serializable {
 
 	private Long id;
 
-	private String smallImgUri;
-
-	private String bigImgUri;
-
 	private Date createTime;
 
 	private Byte type;
@@ -65,36 +61,6 @@ public class News implements Serializable {
 	 */
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	/**
-	 * @return the smallImgUri
-	 */
-	public String getSmallImgUri() {
-		return smallImgUri;
-	}
-
-	/**
-	 * @param smallImgUri
-	 *            the smallImgUri to set
-	 */
-	public void setSmallImgUri(String smallImgUri) {
-		this.smallImgUri = smallImgUri;
-	}
-
-	/**
-	 * @return the bigImgUri
-	 */
-	public String getBigImgUri() {
-		return bigImgUri;
-	}
-
-	/**
-	 * @param bigImgUri
-	 *            the bigImgUri to set
-	 */
-	public void setBigImgUri(String bigImgUri) {
-		this.bigImgUri = bigImgUri;
 	}
 
 	/**

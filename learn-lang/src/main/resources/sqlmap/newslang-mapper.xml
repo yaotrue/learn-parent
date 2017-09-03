@@ -5,6 +5,7 @@
 <mapper namespace="com.yaotrue.mapper.NewsLangMapper">
   	<insert id="save" parameterType="NewsLang" useGeneratedKeys="true" keyProperty="id">
   		INSERT INTO t_ma_news_lang (
+  			news_id,
 			title,
 			content,
 			author,
@@ -13,6 +14,7 @@
 		)
 		VALUES
 			(
+				#{newId},
 				#{title},
 				#{content},
 				#{author},
@@ -23,6 +25,7 @@
   	
   	<insert id="batchSave" parameterType="NewsLang" useGeneratedKeys="true" keyProperty="id">
   		INSERT INTO t_ma_news_lang (
+  			news_id,
 			title,
 			content,
 			author,
@@ -32,6 +35,7 @@
 		VALUES
 			<foreach collection="newsLangs" item="newsLang" index="index" separator=",">
 			(
+				#{newsLang.newsId},
 				#{newsLang.title},
 				#{newsLang.content},
 				#{newsLang.author},
