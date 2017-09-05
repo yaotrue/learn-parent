@@ -19,21 +19,23 @@ $(function() {
 	$('.myaccount-lf ul li').click(function(event) {
 
         var index = $(this).index('.myaccount-lf ul li');
+        console.log(index);
         $('.myaccount-lf ul li').removeClass('current');
 		$(this).addClass('current');
         $('.myaccount-rt>div').addClass('none').siblings().eq(index).removeClass('none');
-        //初始化获取高度
-        var Height = $('.team-cont-l').height(),
-        	_h = Height -40;
-        	$('.events-info-show').addClass('is-active');
-
-	        $('.events-info-show').siblings('div').css({
-	            'height' : _h,
-	            'overflow' : 'hidden'
-	        })
+        $(".fh-interview li").eq(index).addClass('none').siblings().removeClass('none');
 	});
-    $('.events-fh-interview ul li').on('click',function(){
 
+
+    $('.events-fh-interview ul li').on('click',function(){
+        var nowIndex = $(this).attr("data-index");
+        $(this).addClass("none").siblings().removeClass('none');
+        $(".myaccount-rt .ft-box").eq(nowIndex - 1).removeClass('none').siblings().addClass('none');
+        $(".myaccount-lf li").eq(nowIndex - 1).addClass('current').siblings().removeClass('current');
+
+        $('html,body').animate({
+            'scrollTop' : 0
+        },100)
     })
 
 

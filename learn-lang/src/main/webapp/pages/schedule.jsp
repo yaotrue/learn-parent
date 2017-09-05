@@ -31,13 +31,13 @@
         <!-- 面包屑 -->
         <div class="breadcrumb">
             <ul class="list-inline">
-                <li><a href="/">中英峰会</a></li>
+                <li><a href="${base }/">中英峰会</a></li>
                 <li class="divider">&gt;</li>
-                <li><a href="/">关于我们</a></li>
+                <li><a href="${base }/schedule.htm">峰会日程</a></li>
             </ul>
         </div>
 
-        <div class="about-summit myaccount">
+         <div class="about-summit myaccount">
             <div class="tit">
                 <div>
                    <span>&nbsp;</span>

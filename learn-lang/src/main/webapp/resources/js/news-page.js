@@ -40,7 +40,7 @@ $(function(){
         $('.news-1').each(function(index, el) {
             var $news1 = $(el),
                 $pagesContL = $('.pages-cont-l', $news1),
-                $pagesContR = $('.pages-cont-r', $news1),
+                $pagesContR = $('.pages-cont-r .pages-teme', $news1),
                 pagesContLImgH = $('img', $pagesContL).outerHeight(true),
                 $pagesContRH5 = $('> div > h5', $pagesContR),
                 pagesContRH5H = $pagesContRH5.outerHeight(true),
@@ -67,7 +67,7 @@ $(function(){
                 isActive = _this.hasClass('is-active'),
                 $news1 = _this.parents('.news-1'),
                 $pagesContL = $('.pages-cont-l', $news1),
-                $pagesContR = $('.pages-cont-r', $news1),
+                $pagesContR = $('.pages-cont-r .pages-teme', $news1),
                 pagesContLImgH = $('img', $pagesContL).outerHeight(true),
                 $pagesContRH5 = $('> div > h5', $pagesContR),
                 pagesContRH5H = $pagesContRH5.outerHeight(true),

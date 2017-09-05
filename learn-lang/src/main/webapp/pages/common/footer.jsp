@@ -32,5 +32,6 @@
     </div>
     <div class="fot-botm">
         <p>© 2017 Sino-British Summit 中英峰会</p>
+        <a href="${base }/policy.htm">隐私政策</a>|<a href="${base }/low.htm">法律声明</a>
     </div>
 </div>

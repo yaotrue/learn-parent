@@ -71,4 +71,16 @@ public class IndexController extends BaseController {
 		model.addAttribute("navbar", "news");
 		return "news";
 	}
+	
+	@RequestMapping("/low.htm")
+	public String low(Model model){
+		model.addAttribute("navbar", "index");
+		return "low";
+	}
+	
+	@RequestMapping("/policy.htm")
+	public String policy(Model model){
+		model.addAttribute("navbar", "index");
+		return "policy";
+	}
 }

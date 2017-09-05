@@ -44,17 +44,18 @@ body{
 	color: #333;
 }
 .myaccount-inner {
-	max-width: 1280px;
+	max-width: 1370px;
 	margin: 0 auto;
 }
 .myaccount-lf{
 	float: left;
-	width: 268px;
-	margin-right: -268px;
+	width: 330px;
+	margin-right: -330px;
 	display: inline-block;
 	position: relative;
 }
 .myaccount-lf h5{
+	width: 268px;
 	font-size: 24px;
 	color: #333333;
 	padding-bottom: 6px;
@@ -87,7 +88,7 @@ body{
 	width: 100%;
 }
 .myaccount-rt>div{
-	margin-left: 420px;
+	margin-left: 396px;
 }
 .myaccount-rt .headline{
 	position: relative;
@@ -159,7 +160,7 @@ body{
     width: 100%;
 }
 .team-cont-r>div {
-	margin-left: 457px;
+	margin-left: 470px;
 }
 .myaccount-rt .team-cont-r .team-cont-wapper>div .name,.myaccount-rt .team-cont-r .team-cont-wapper>div h5{
 	font-size: 24px;

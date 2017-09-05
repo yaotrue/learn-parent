@@ -51,16 +51,17 @@
 	-o-box-sizing: border-box;
 }
 .pages-left{
-	width: 20.6%;
-	vertical-align: top;
+	float: left;
+    width: 330px;
+    margin-right: -330px;
     display: inline-block;
-    height: auto;
     position: relative;
 
 }
 .pages-left .pages-left-info p{
 	font-family: "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 	font-size: 24px;
+	width: 268px;
 	color: #333333;
 	border-bottom: 1px solid #333333;
 	padding-bottom:8px;
@@ -91,10 +92,13 @@
 	top: 7px;
 }
 .pages-right{
-	display: inline-block;
-	width:78.6%;
+	float: left;
+    display: inline-block;
+    width: 100%;
 }
-
+.pages-right>div {
+    margin-left: 396px;
+}
 .pages-right .pages-cont-l ,.pages-right .pages-cont-r{
     position: relative;
     display: inline-block;
@@ -122,16 +126,20 @@
 	margin-bottom: 12px;
 }
 .pages-right .pages-cont-l {
-	width:53%;
-	box-sizing:border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	padding:0 7%;
+	float: left;
+    width: 400px;
+    z-index: 111;
+    margin-right: -400px;
+    display: inline-block;
+    position: relative;
 }
-.pages-cont-r{
-	position: relative;
+.pages-right .pages-cont-r{
+	float: left;
+    display: inline-block;
+    width: 100%;
+}
+.pages-cont-r>div {
+    margin-left: 470px;
 }
 .pages-cont-r h5{
 	font-size: 24px;
@@ -177,20 +185,17 @@
 .pages-cont-l ul li.padd-left{
 	padding-left: 10px;
 }
-.pages-right .pages-cont-r {
-	width:46%;
-}
 .news-1{
 	margin-bottom: 100px;
 }
+
 .info-show{
-    font-size: 14px;
-    color: #000;
-    height: 43px;
-    overflow: hidden;
-    line-height: 43px;
-    border-bottom:  1px solid #8E8E8E;
+    height: 45px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #333;
     cursor: pointer;
+    padding-right: 6px;
+    line-height: 45px;
     text-align: justify;
 }
 .info-show:after{
@@ -208,20 +213,13 @@
 	display: inline-block !important;
 	vertical-align: middle;
 }
-.pages-cont-r div > p{
+.pages-cont-r .pages-teme div > p{
 	margin-bottom: 18px;
 	font-size: 14px;
+
 }
-.pages-cont-r div > p span{
-	font-size: 14px;
-	color: #151515;
-	font-weight: bold;
-	display: block;
-	letter-spacing: 0;
-	line-height: 20px;
-}
+
 .info-show.is-active{
-    /*position: absolute;*/
     width: 100%;
     background: #fff;
 }

@@ -195,12 +195,20 @@
 .footer .con .detial ul li a img{
 	vertical-align: middle;
 }
-.footer .fot-botm p{
+.footer .fot-botm{
 	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 	font-size: 12px;
 	color: #9F9F9F;
 	text-align: center;
 	padding: 62px 0 118px;
+}
+.footer .fot-botm a{
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	font-size: 12px;
+	color: #9F9F9F;
+	display: inline-block;
+	text-align: center;
+	padding:  5px;
 }
 /* 回到顶部 */
 .back-top{

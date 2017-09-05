@@ -38,9 +38,6 @@ $(function() {
                 pagesContRNewH = pagesContLImgH - (pagesContRH5H + infoShowH),
                 pagesContRTextH = pagesContRNewH - (pagesContRNewH%18)
 
-                console.log(pagesContRTextH);
-
-
             $('> div > div', $pagesContR).css({
                 'height': pagesContRTextH,
                 'overflow': 'hidden'

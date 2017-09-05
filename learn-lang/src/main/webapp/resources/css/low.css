@@ -1,0 +1,56 @@
+body{
+	min-width: 1100px;
+}
+/* 导航 */
+.nav-bar{
+	position: relative;
+}
+.about-summit .tit{
+	margin-bottom: 80px;
+}
+.about-summit .tit > div {
+	position: relative;
+	text-align: center;
+	margin: 39px auto 0;
+}
+.about-summit .tit h5 {
+	display: inline-block;
+	font-size: 64px;
+	color: #000;
+	padding: 15px;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+.about-summit .tit span{
+	display: block;
+	height: 1px;
+	background: #d8d8d8;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -0.5px;
+	z-index: 0;
+}
+/* 说明 */
+.low-box{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.low-content{
+	padding:15px 0;
+}
+.low-content>div{
+	margin-bottom: 25px;
+	font-size: 14px;
+	color: #333;
+	line-height: 22px;
+}
+.low-content p.title-p{
+	font-size: 16px;
+}
+.low-content p.indent{
+	text-indent: 32px;
+}
+

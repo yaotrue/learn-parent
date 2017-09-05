@@ -41,13 +41,13 @@
 	background: url(../images/index/doted.png) no-repeat;
 }
 .flex-direction-nav a{
-	top: 78%;
+	top: 77%;
 }
 .flexslider .flex-next{
-	right: 15%;
+	right: 10%;
 }
 .flexslider .flex-prev{
-	left: 15%;
+	left: 10%;
 }
 .summit-news {
 
@@ -472,6 +472,24 @@
 		-o-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 	}
+	.flex-direction-nav a{
+		top: 83%;
+	}
+	.flexslider .flex-next{
+		right: 2%;
+	}
+	.flexslider .flex-prev{
+		left: 2%;
+	}
+}
+@media screen and (max-width:1366px){
+	.txt-info div h4{
+		font-size: 50px;
+	}
+	.txt-info div p{
+		font-size: 22px;
+		margin-top: 10px;
+	}
 }
 @media screen and (max-width:1390px){
 	.txt-info div{
@@ -482,6 +500,9 @@
 	}
 	.flexslider .flex-prev{
 		left: 6%;
+	}
+	.flex-direction-nav a{
+		top: 77%;
 	}
 	.model ul{
 		padding: 0 20px;

@@ -42,21 +42,23 @@ body{
 	text-align: center;
 	font-size: 24px;
 	color: #333;
+	line-height: 30px;
 }
 .myaccount-inner {
-	max-width: 1280px;
+	max-width: 1370px;
 	margin: 0 auto 170px;
 }
 .myaccount-lf{
 	float: left;
-	width: 298px;
-	margin-right: -298px;
+	width: 330px;
+	margin-right: -330px;
 	display: inline-block;
 	position: relative;
 }
 .myaccount-lf h5{
 	font-size: 24px;
 	color: #333333;
+	width: 268px;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #333;
 	margin-bottom: 16px;
@@ -88,7 +90,7 @@ body{
 	width: 100%;
 }
 .myaccount-rt>div{
-	margin-left: 364px;
+	margin-left: 396px;
 }
 .myaccount-rt .ft-box>div{
 	position: relative;
@@ -115,6 +117,7 @@ body{
 	color: #000000;
 	letter-spacing: 0;
 	text-align: center;
+	line-height: 45px;
 }
 .myaccount-rt .ft-box>div .ft-title span{
 	display: block;
@@ -125,7 +128,7 @@ body{
 	margin: 24px 0;
 }
 .myaccount-rt .ft-content{
-	padding: 5px 77px 94px;
+	padding: 20px 77px 94px;
 	border-bottom: 1px solid #8E8E8E;
 }
 .myaccount-rt .ft-content p{
@@ -134,6 +137,17 @@ body{
 	letter-spacing: 0;
 	line-height: 20px;
 	margin-bottom: 18px;
+}
+.myaccount-rt .ft-content p span{
+	font-size: 18px;
+	color: #151515;
+	letter-spacing: 0;
+	line-height: 20px;
+	font-weight: bold;
+	display: block;
+}
+.myaccount-rt .ft-content p b{
+	display: block;
 }
 .myaccount-inner .fh-interview ul li {
     font-size: 12px;
@@ -182,7 +196,7 @@ body{
     min-height: 126px;
 }
 .none{
-	display: none;
+	display: none!important;
 }
 .ft-box .flexslider .flex-next,.ft-box .flexslider .flex-prev{
 	display: none!important;

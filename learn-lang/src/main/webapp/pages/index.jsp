@@ -39,7 +39,7 @@
 	        <div class="flexslider event-kv">
 	           <ul class="slides">
 	               <li>
-	                   <img src="${base }/resources/images/index/kv-1.jpg" />
+	                   <img src="${base }/resources/images/index/kv.jpg" />
 	                   <div class="txt-info">
 	                       <div>
 	                           <h4>世界风云变化 中国如何应对</h4>
@@ -51,26 +51,8 @@
 	                   <img src="${base }/resources/images/index/kv-2.jpg" />
 	                   <div class="txt-info">
 	                       <div>
-	                           <h4>世界风云变化 中国如何应对</h4>
-	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
-	                       </div>
-	                   </div>
-	               </li>
-	               <li>
-	                   <img src="${base }/resources/images/index/kv-3.jpg" />
-	                   <div class="txt-info">
-	                       <div>
-	                           <h4>世界风云变化 中国如何应对</h4>
-	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
-	                       </div>
-	                   </div>
-	               </li>
-	               <li>
-	                   <img src="${base }/resources/images/index/kv-4.jpg" />
-	                   <div class="txt-info">
-	                       <div>
-	                           <h4>世界风云变化 中国如何应对</h4>
-	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
+	                           <h4>世界能源-Gate 国际有限公司总裁专访</h4>
+	                           <p>壳牌中国前董事、精品资讯兼投资公司Gate国际有限公司总裁EurIng. Henry K. H. Wang专访</p>  
 	                       </div>
 	                   </div>
 	               </li>
@@ -86,7 +68,7 @@
             <ul>
                 <li class="fir">
                     <div>
-                       <a href="#">
+                       <a href="${base }/schedule.htm">
                             <img src="${base }/resources/images/index/newsbanner01.png" />
                             <h5>中西教育的碰撞:应试教育和素质教育，哪一种更能迎合当今社会的需求？</h5>
                             <p>随着出国留学人数的增多，“中国留学生”已经从稀有零散的个体日渐汇集成了一个庞大的群体。2015年出国留学人数首度突破50万人，其中赴英留学生数量占总数的34%。</p>
@@ -99,7 +81,7 @@
                 </li>
                 <li class="sec">
                     <div>
-                       <a href="#">
+                       <a href="${base }/schedule.htm">
                             <img src="${base }/resources/images/index/newsbanner02.png" />
                             <h5>国际社会对中国的影响—探索2017年中国的国际策略。</h5>
                             <p>美国台湾商会会长、英国在野党亚洲外交大臣、以及牛津大学中国现代政治历史教授，这三位国际关系专家将在2月4号的伦敦中英峰会上一同讨论2017年的世界格局，一起探索2017年中国的国际策略。</p>
@@ -112,7 +94,7 @@
                 </li>
                 <li class="thir">
                     <div>
-                       <a href="#">
+                       <a href="${base }/schedule.htm">
                             <img src="${base }/resources/images/index/newsbanner03.png" />
                             <h5>中国企业在国际化的道路上所面临的机遇和挑战</h5>
                             <p>“苏格兰将等待英国与欧盟之间’脱欧’谈判完成，等待最终的’脱欧’谈判协议出炉，看其是否符合苏格兰的利益，然后再决定何时举行独立公投，”拉塞尔说...</p>
@@ -125,7 +107,7 @@
                 </li>
             </ul>
             <div class="view-more">
-                <a href="#">查看更多</a>
+                <a href="${base }/news.htm">查看更多</a>
             </div>
         </div>
         <div class="summit-blog model">
@@ -136,7 +118,7 @@
             <ul>
                 <li class="fir">
                     <div>
-                       <a href="#">
+                       <a href="${base }/project.htm">
                             <img src="${base }/resources/images/index/blogbanner01.png" />
                         </a> 
                         <div class="detail">
@@ -149,8 +131,8 @@
                 <li class="sec">&nbsp;</li>
                 <li class="thir">
                     <div>
-                       <a href="#">
-                            <img src="${base }/resources/images/index/blogbanner01.png" />
+                       <a href="${base }/project.htm">
+                            <img src="${base }/resources/images/index/360-s.png" />
                         </a> 
                         <div class="detail">
                             <p>360海外广告部总经理专访—品牌定位与海外战略</p>
@@ -161,7 +143,7 @@
                 </li>
             </ul>
             <div class="view-more">
-                <a href="#">查看更多</a>
+                <a href="${base }/project.htm">查看更多</a>
             </div>
         </div>
         <div class="summit-member">
@@ -237,7 +219,7 @@
                         </ul>
                     </div>
                     <div class="view-more">
-                        <a href="#" class="more-momber">中英峰会 | 顾问、嘉宾、执行团队一览<img src="${base }/resources/images/index/arrow-d.png" /></a>
+                        <a href="${base }/about-us.htm?a2" class="more-momber">中英峰会 | 顾问、嘉宾、执行团队一览<img src="${base }/resources/images/index/arrow-d.png" /></a>
                     </div>
                 </div>
             </div>
@@ -252,16 +234,16 @@
                     <ul class="slides">
                         <li>
                             <div class="fir">
-                                <img src="${base }/resources/images/index/p-logo-fc.png" />
+                                <img src="${base }/resources/images/index/p-logo-bs.png" />
                             </div>
                             <div class="sec">
-                                <img src="${base }/resources/images/index/p-logo-gh.png" />
+                                <img src="${base }/resources/images/index/p-logo-eu.png" />
                             </div>
                             <div class="thir">
-                                <img src="${base }/resources/images/index/p-logo-hwzk.png" />
+                                <img src="${base }/resources/images/index/p-logo-fs.png" />
                             </div>
                             <div class="fou">
-                                <img src="${base }/resources/images/index/p-logo-hw.png" />
+                                <img src="${base }/resources/images/index/p-logo-yr.png" />
                             </div>
                         </li>
                         <li>
