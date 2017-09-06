@@ -30,7 +30,7 @@ public interface NewsLangMapper {
 
 	void save(NewsLang newsLang);
 	
-	void batchSave(List<NewsLang> newsLangs);
+	void batchSave(@Param("newsLangs")List<NewsLang> newsLangs);
 	
 	void update(NewsLang newsLang);
 	

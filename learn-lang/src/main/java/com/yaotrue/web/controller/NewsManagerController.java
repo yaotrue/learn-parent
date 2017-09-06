@@ -28,8 +28,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.yaotrue.manager.NewsManager;
-import com.yaotrue.model.News;
+import com.yaotrue.util.LangUtil;
 import com.yaotrue.web.command.NewCommand;
+import com.yaotrue.web.command.NewsViewCommand;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a> 2017年8月16日 下午1:45:32
@@ -42,7 +43,7 @@ public class NewsManagerController extends BaseController {
 
 	@RequestMapping(value = "/admin")
 	public String admin(HttpServletRequest request, Model model) {
-		List<News> news = newsManager.findByPageAndType(null, 0, 20);
+		List<NewsViewCommand> news = newsManager.findByLang(LangUtil.ZH_CN);
 		model.addAttribute("news", news);
 		return "/admin/index";
 	}
@@ -60,7 +61,7 @@ public class NewsManagerController extends BaseController {
 
 	@RequestMapping(value = "/admin/saveNew", method = RequestMethod.POST)
 	public String saveNew(@ModelAttribute NewCommand newCommand) {
-
-		return "json";
+		newsManager.save(newCommand);
+		return "redirect:/admin";
 	}
 }

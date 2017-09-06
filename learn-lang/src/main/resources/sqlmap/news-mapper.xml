@@ -67,4 +67,25 @@
 		AND STATUS != 3
 		LIMIT #{start},#{pageSize}
   	</select>
+  	
+  	<select id="findByLang" resultType="NewsViewCommand">
+  		SELECT
+			n.id,
+			n.create_time,
+			n.status,
+			n.type,
+			nl.author,
+			nl.content,
+			nl.title
+		FROM
+			t_ma_news n
+		LEFT JOIN t_ma_news_lang nl ON n.id = nl.new_id
+		WHERE
+			lang = #{lang}
+		AND
+			status != 4
+		ORDER BY
+			n.create_time
+		DESC
+  	</select>
 </mapper>

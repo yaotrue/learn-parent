@@ -16,8 +16,7 @@
 package com.yaotrue.web.command;
 
 /**
- * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
- * 2017年8月16日 下午9:15:32
+ * @author <a href="mailto:yaotrue@163.com">yaotrue</a> 2017年8月16日 下午9:15:32
  */
 public class NewCommand extends BaseCommand {
 
@@ -25,22 +24,22 @@ public class NewCommand extends BaseCommand {
 	 * <code>{@value}</code>
 	 */
 	private static final long serialVersionUID = 6732505915393715598L;
-	
+
 	private Long id;
-	
-	private String title;
 
-	private String content;
+	private String title_zh;
 
-	private String smallImgUri;
+	private String title_en;
 
-	private String bigImgUri;
+	private String content_zh;
 
-	private String author;
+	private String content_en;
+
+	private String author_zh;
+
+	private String author_en;
 
 	private Byte type;
-
-	private Byte status;
 
 	/**
 	 * @return the id
@@ -58,78 +57,93 @@ public class NewCommand extends BaseCommand {
 	}
 
 	/**
-	 * @return the title
+	 * @return the title_zh
 	 */
-	public String getTitle() {
-		return title;
+	public String getTitle_zh() {
+		return title_zh;
 	}
 
 	/**
-	 * @param title
-	 *            the title to set
+	 * @param title_zh
+	 *            the title_zh to set
 	 */
-	public void setTitle(String title) {
-		this.title = title;
+	public void setTitle_zh(String title_zh) {
+		this.title_zh = title_zh;
 	}
 
 	/**
-	 * @return the content
+	 * @return the title_en
 	 */
-	public String getContent() {
-		return content;
+	public String getTitle_en() {
+		return title_en;
 	}
 
 	/**
-	 * @param content
-	 *            the content to set
+	 * @param title_en
+	 *            the title_en to set
 	 */
-	public void setContent(String content) {
-		this.content = content;
+	public void setTitle_en(String title_en) {
+		this.title_en = title_en;
 	}
 
 	/**
-	 * @return the smallImgUri
+	 * @return the content_zh
 	 */
-	public String getSmallImgUri() {
-		return smallImgUri;
+	public String getContent_zh() {
+		return content_zh;
 	}
 
 	/**
-	 * @param smallImgUri
-	 *            the smallImgUri to set
+	 * @param content_zh
+	 *            the content_zh to set
 	 */
-	public void setSmallImgUri(String smallImgUri) {
-		this.smallImgUri = smallImgUri;
+	public void setContent_zh(String content_zh) {
+		this.content_zh = content_zh;
 	}
 
 	/**
-	 * @return the bigImgUri
+	 * @return the content_en
 	 */
-	public String getBigImgUri() {
-		return bigImgUri;
+	public String getContent_en() {
+		return content_en;
 	}
 
 	/**
-	 * @param bigImgUri
-	 *            the bigImgUri to set
+	 * @param content_en
+	 *            the content_en to set
 	 */
-	public void setBigImgUri(String bigImgUri) {
-		this.bigImgUri = bigImgUri;
+	public void setContent_en(String content_en) {
+		this.content_en = content_en;
 	}
 
 	/**
-	 * @return the author
+	 * @return the author_zh
 	 */
-	public String getAuthor() {
-		return author;
+	public String getAuthor_zh() {
+		return author_zh;
 	}
 
 	/**
-	 * @param author
-	 *            the author to set
+	 * @param author_zh
+	 *            the author_zh to set
 	 */
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setAuthor_zh(String author_zh) {
+		this.author_zh = author_zh;
+	}
+
+	/**
+	 * @return the author_en
+	 */
+	public String getAuthor_en() {
+		return author_en;
+	}
+
+	/**
+	 * @param author_en
+	 *            the author_en to set
+	 */
+	public void setAuthor_en(String author_en) {
+		this.author_en = author_en;
 	}
 
 	/**
@@ -145,21 +159,6 @@ public class NewCommand extends BaseCommand {
 	 */
 	public void setType(Byte type) {
 		this.type = type;
-	}
-
-	/**
-	 * @return the status
-	 */
-	public Byte getStatus() {
-		return status;
-	}
-
-	/**
-	 * @param status
-	 *            the status to set
-	 */
-	public void setStatus(Byte status) {
-		this.status = status;
 	}
 
 }

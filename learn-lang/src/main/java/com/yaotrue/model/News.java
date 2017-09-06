@@ -31,22 +31,34 @@ public class News implements Serializable {
 	/**类型：新闻*/
 	public static final Byte TYPE_NEWS = 1;
 	
-	/**类型：博客*/
-	public static final Byte TYPE_BLOG = 2;
+	/**类型：项目*/
+	public static final Byte TYPE_PROJECT = 2;
 	
-	/**状态：新建*/
-	public static final Byte STATUS_NEW = 1;
+	/**类型：日程*/
+	public static final Byte TYPE_SCHEDULE = 3;
+	
+	/**类型：首页KV*/
+	public static final Byte TYPE_INDEX_KV = 4;
+	
+	/**状态：初始化*/
+	public static final Byte STATUS_INIT = 1;
+	
+	/**状态：启用*/
+	public static final Byte STATUS_ENABLE = 2;
+	
+	/**状态：不启用*/
+	public static final Byte STATUS_DISABLE = 3;
 	
 	/**状态：删除*/
-	public static final Byte STATUS_DELETE = 2;
+	public static final Byte STATUS_DELETE = 4;
 
 	private Long id;
 
-	private Date createTime;
+	private Date createTime = new Date();
 
 	private Byte type;
 
-	private Byte status;
+	private Byte status = STATUS_INIT;
 
 	/**
 	 * @return the id

@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yaotrue.mapper.NewsLangMapper">
-  	<insert id="save" parameterType="NewsLang" useGeneratedKeys="true" keyProperty="id">
+  	<insert id="save" parameterType="NewsLang" useGeneratedKeys="true">
   		INSERT INTO t_ma_news_lang (
-  			news_id,
+  			new_id,
 			title,
 			content,
 			author,
@@ -23,9 +23,9 @@
 			)
   	</insert>
   	
-  	<insert id="batchSave" parameterType="NewsLang" useGeneratedKeys="true" keyProperty="id">
+  	<insert id="batchSave" parameterType="NewsLang" useGeneratedKeys="true">
   		INSERT INTO t_ma_news_lang (
-  			news_id,
+  			new_id,
 			title,
 			content,
 			author,
@@ -35,7 +35,7 @@
 		VALUES
 			<foreach collection="newsLangs" item="newsLang" index="index" separator=",">
 			(
-				#{newsLang.newsId},
+				#{newsLang.newId},
 				#{newsLang.title},
 				#{newsLang.content},
 				#{newsLang.author},

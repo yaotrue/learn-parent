@@ -20,6 +20,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import com.yaotrue.model.News;
+import com.yaotrue.web.command.NewsViewCommand;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
@@ -38,4 +39,6 @@ public interface NewsMapper {
 	List<News> findNewsByTypeAndCount(@Param("type") Byte type,@Param("count") Integer count);
 	
 	List<News> findByPageAndType(@Param("type") Byte type,@Param("start") Integer start,@Param("pageSize") Integer pageSize);
+	
+	List<NewsViewCommand> findByLang(@Param("lang") String lang);
 }

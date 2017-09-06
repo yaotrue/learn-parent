@@ -18,6 +18,8 @@ package com.yaotrue.manager;
 import java.util.List;
 
 import com.yaotrue.model.News;
+import com.yaotrue.web.command.NewCommand;
+import com.yaotrue.web.command.NewsViewCommand;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
@@ -36,4 +38,8 @@ public interface NewsManager {
 	List<News> findNewsByTypeAndCount(Byte type,Integer count);
 	
 	List<News> findByPageAndType(Byte type,Integer start,Integer pageSize);
+	
+	void save(NewCommand newCommand);
+	
+	List<NewsViewCommand> findByLang(String lang);
 }
