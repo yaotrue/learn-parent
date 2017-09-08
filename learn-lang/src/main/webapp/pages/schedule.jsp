@@ -37,7 +37,7 @@
             </ul>
         </div>
 
-         <div class="about-summit myaccount">
+        <div class="about-summit myaccount">
             <div class="tit">
                 <div>
                    <span>&nbsp;</span>

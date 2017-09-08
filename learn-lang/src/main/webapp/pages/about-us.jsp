@@ -232,24 +232,24 @@
                             <span class="fir">邮编：</span>
                             <span class="sec">WC West Central London</span>
                         </p>
-                    </div>
-                    <div class="sec">
-                        <h5>中英峰会深圳办事处</h5>
-                        <p>
-                            <span class="fir">地址：</span>
-                            <span class="sec">深圳市福田区新洲路2011号</span>
-                        </p>
-                        <p>
-                            <span class="fir">电话：</span>
-                            <span class="sec">140 2010-05-14</span>
-                        </p>
-                        <p>
-                            <span class="fir">邮编：</span>
-                            <span class="sec">518000</span>
-                        </p>
+                        <div class="botm-email">
+                            <div class="fir">
+                                <p>
+                                    <span class="fir">活动咨询联系邮箱：</span>
+                                    <span class="sec">V.Qiu@sinobritishsummit.org</span>
+                                </p>
+                            </div>
+                            <div class="sec">
+                                <p>
+                                    <span class="fir">赞助咨询联系邮箱：</span>
+                                    <span class="sec">R.Li@sinobritishsummit.org</span>
+                                </p>
+                            </div>    
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 			<%@include file="/pages/common/footer.jsp"%>
 		</div>

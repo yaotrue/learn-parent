@@ -169,7 +169,9 @@
 .news-box-max{
 	width: 100%;
 	background: url(../images/page/ju-bgpic.png) no-repeat;
-	padding: 46px 0 116px;
+	background-size: 100% 100%;
+	margin: 46px 0 116px;
+	padding: 46px 0 86px;
 }
 .apply-for-details{
 	max-width:1276px;

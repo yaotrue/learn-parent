@@ -38,7 +38,7 @@ public class NewManagerTest extends BaseTest {
 	@Test
 	public void testNews(){
 		News news = new News();
-		news.setStatus(News.STATUS_NEW);
+		news.setStatus(News.STATUS_INIT);
 		news.setType(News.TYPE_NEWS);
 		
 		newsManager.save(news);

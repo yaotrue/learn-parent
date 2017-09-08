@@ -124,7 +124,8 @@ body{
 	padding-bottom: 213px;
 }
 .contact-con{
-	width: 70%;
+	text-align: center;
+	width: 730px;
 	margin: 0 auto;
 	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 }
@@ -133,27 +134,15 @@ body{
 	margin-bottom: 108px;
 }
 .contact-con>div{
-	display: inline-block;
-	width: 49%;
 	font-size: 0;
 	text-align: left;
 	vertical-align: top;
 }
-.contact-con .fir{
-	padding-right: 90px;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-.contact-con .sec{
-	padding-left: 90px;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+.contact-con .fir h5{
+	text-align: center;
+	font-size: 34px;
+	color: #333;
+	font-family: "Times New Roman", "Arial","STSongti-SC-Regular","PingFangSC-Regular","宋体","SimSun",  "微软雅黑", "Microsoft YaHei", "sans-serif";
 }
 .contact-con h5{
 	margin-bottom: 20px;
@@ -182,7 +171,31 @@ body{
 .contact-con p{
 	padding-left: 76px;
 }
-
+.botm-email{
+	font-size: 0;
+	padding-top: 26px;
+}
+.botm-email .fir{
+	padding-right: 30px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.botm-email .fir, .botm-email .sec{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+.botm-email .fir p,.botm-email .sec p{
+	padding-left: 0;
+}
+.botm-email .fir p span ,.botm-email .sec p span{
+	position: relative;
+	display: block;
+	width: 100%;
+}
 /* 我们的特点 */
 
 .trait-down>div{

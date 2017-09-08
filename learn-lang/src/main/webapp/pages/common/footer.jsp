@@ -25,7 +25,7 @@
                     <a href="${base }/about-us.htm"><img src="${base }/resources/images/index/icon-aboutus.png" /><spring:message code="navbar.aboutus"/></a>
                 </li>
                 <li class="m0">
-                    <a href="${base }/join-us.htm"><img src="${base }/resources/images/index/icon-contactus.png" /><spring:message code="footer.contactus"/></a>
+                    <a href="${base }/join-us.htm"><img src="${base }/resources/images/index/icon-contactus.png" /><spring:message code="navbar.joinus"/></a>
                 </li>
             </ul>
         </div>
@@ -35,3 +35,12 @@
         <a href="${base }/policy.htm">隐私政策</a>|<a href="${base }/low.htm">法律声明</a>
     </div>
 </div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b888988ce6cddb080888c919f482c5e8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>

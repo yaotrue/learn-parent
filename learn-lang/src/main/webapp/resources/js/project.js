@@ -24,6 +24,9 @@ $(function() {
 		$(this).addClass('current');
         $('.myaccount-rt>div').addClass('none').siblings().eq(index).removeClass('none');
         $(".fh-interview li").eq(index).addClass('none').siblings().removeClass('none');
+
+
+
 	});
 
 
@@ -35,8 +38,20 @@ $(function() {
 
         $('html,body').animate({
             'scrollTop' : 0
-        },100)
+        },100);
+        if(nowIndex==3){
+
+            $('.events-fh-interview ul li').eq(1).removeClass('fir').addClass('thir')
+        }else{
+            $('.events-fh-interview ul li').eq(1).removeClass('thir').addClass('fir')
+        }
     })
 
+
+        var _map = window.location.search.replace('?a', '');
+
+        if (_map <= ($('.myaccount-lf ul li').length - 1)) {
+            $('.myaccount-lf ul li:eq('+ _map +')').trigger('click');
+        }
 
 });
