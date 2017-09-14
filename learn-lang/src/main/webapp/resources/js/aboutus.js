@@ -19,11 +19,6 @@ $(function() {
 
 
 
-
-
-
-
-
 	//点击收回
     $(window).on('load', function() {
 
@@ -52,8 +47,7 @@ $(function() {
                 $infoShow.addClass('is-active');
 
             });
-    });
-
+        });
         $('.events-info-show').on('click', function() {
             var _this = $(this),
                 isActive = _this.hasClass('is-active'),
@@ -80,8 +74,6 @@ $(function() {
             }
 
         });
-    
-
 
          var _map = window.location.search.replace('?a', '');
 
@@ -89,9 +81,36 @@ $(function() {
             $('.myaccount-lf ul li:eq('+ _map +')').trigger('click');
          }
 
-    })
-    
+         // 领队团员切换
+        $('.events-about-team li').on('click',function(event) {
+            var index = $(this).index('.about-team ul li');
+            $('.about-team ul li').removeClass('active');
+            $(this).addClass('active');
+            $('.myaccount-down  .about-team-content').addClass('none').siblings().eq(index).removeClass('none');
+            //初始化
+            $('.team-member').each(function(index, el) {
+                var $news1 = $(el),
+                    $pagesContL = $('.team-cont-l'),
+                    $pagesContR = $('.team-cont-r .team-cont-wapper', $news1),
+                    pagesContLImgH = $('img', $pagesContL).outerHeight(true),
+                    $pagesContRH5 = $('> div > .name-ch', $pagesContR),
+                    pagesContRH5H = $pagesContRH5.outerHeight(true),
+                    $infoShow = $('.events-info-show', $pagesContR),
+                    infoShowH = $infoShow.outerHeight(true),
+                    pagesContRNewH = pagesContLImgH - (pagesContRH5H + infoShowH),
+                    pagesContRTextH = pagesContRNewH - (pagesContRNewH%18);
+                $('> div > div', $pagesContR).css({
+                    'height': pagesContRTextH,
+                    'overflow': 'hidden'
+                })
+                $infoShow.addClass('is-active');
 
-    
+            });
+        });
+
+
+    })
+
+
 
 });

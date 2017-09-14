@@ -356,7 +356,23 @@ body{
 
 }
 .none{
-	display: none;
+	display: none !important;
+}
+.about-team {
+	border-top: 1px #000 solid;
+	padding:30px 0 35px;
+}
+.about-team ul li{
+	margin-right: 100px;
+	display: inline-block;
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	font-size: 24px;
+	color: #333;
+	letter-spacing: 0;
+	cursor: pointer;
+}
+.about-team ul li.active{
+	color: #A53B33;
 }
 @media screen and (max-width:1440px){
 	.myaccount-inner{

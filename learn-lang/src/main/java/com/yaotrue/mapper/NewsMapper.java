@@ -41,4 +41,6 @@ public interface NewsMapper {
 	List<News> findByPageAndType(@Param("type") Byte type,@Param("start") Integer start,@Param("pageSize") Integer pageSize);
 	
 	List<NewsViewCommand> findByLang(@Param("lang") String lang);
+	
+	List<NewsViewCommand> findByTypeAndLang(@Param("type") Byte type,@Param("lang") String lang,@Param("limit")Integer limit);
 }

@@ -54,6 +54,27 @@
 		LIMIT #{count}
   	</select>
   	
+  	<select id="findByTypeAndLang" resultType="NewsViewCommand">
+  		SELECT
+			news.id,
+			news.create_time,
+			lang.title,
+			lang.content,
+			lang.author
+		FROM
+			t_ma_news news
+		LEFT JOIN t_ma_news_lang lang ON news.id = lang.new_id
+		AND lang.lang = #{lang}
+		WHERE
+			type = #{type}
+		AND STATUS = 2
+		ORDER BY
+			news.create_time
+		<if test="limit != null and limit!=''">
+		LIMIT #{limit}
+		</if>
+  	</select>
+  	
   	<select id="findByPageAndType" resultType="News">
   		SELECT
 			*

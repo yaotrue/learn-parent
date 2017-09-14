@@ -25,6 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.yaotrue.mapper.NewsLangMapper;
 import com.yaotrue.mapper.NewsMapper;
 import com.yaotrue.model.News;
+import com.yaotrue.model.NewsImage;
 import com.yaotrue.model.NewsLang;
 import com.yaotrue.util.LangUtil;
 import com.yaotrue.web.command.NewCommand;
@@ -43,7 +44,10 @@ public class NewsManagerImpl implements NewsManager {
 	
 	@Autowired
 	private NewsLangMapper	newsLangMapper;
-
+	
+	@Autowired
+	private NewsImageManager	newsImageManager;
+	
 	/* (non-Javadoc)
 	 * @see com.yaotrue.manager.NewsManager#save(com.yaotrue.model.News)
 	 */
@@ -78,6 +82,38 @@ public class NewsManagerImpl implements NewsManager {
 	@Transactional(readOnly = true)
 	public News getByPrimaryKey(Long id) {
 		return newsMapper.getByPrimaryKey(id);
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.yaotrue.manager.NewsManager#getByNewsId(java.lang.Long)
+	 */
+	@Override
+	@Transactional(readOnly = true)
+	public NewCommand getByNewsId(Long newsId) {
+		News news = getByPrimaryKey(newsId);
+		
+		NewCommand newCommand = new NewCommand();
+		newCommand.setId(newsId);
+		newCommand.setType(news.getType());
+		
+		List<NewsLang> newsLangs = newsLangMapper.findByNewId(newsId);
+		if(null == newsLangs){
+			return newCommand;
+		}
+		
+		for (NewsLang newsLang : newsLangs) {
+			if(LangUtil.ZH_CN.equals(newsLang.getLang())){
+				newCommand.setAuthor_zh(newsLang.getAuthor());
+				newCommand.setContent_zh(newsLang.getContent());
+				newCommand.setTitle_zh(newsLang.getTitle());
+			}else if(LangUtil.EN_US.equals(newsLang.getLang())){
+				newCommand.setAuthor_en(newsLang.getAuthor());
+				newCommand.setContent_en(newsLang.getContent());
+				newCommand.setTitle_en(newsLang.getTitle());
+			}
+		}
+		
+		return newCommand;
 	}
 
 	/* (non-Javadoc)
@@ -141,5 +177,23 @@ public class NewsManagerImpl implements NewsManager {
 	@Override
 	public List<NewsViewCommand> findByLang(String lang) {
 		return newsMapper.findByLang(lang);
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.yaotrue.manager.NewsManager#findByTypeAndLang(java.lang.Byte, java.lang.String, java.lang.Integer)
+	 */
+	@Override
+	public List<NewsViewCommand> findByTypeAndLang(Byte type, String lang, Integer limit) {
+		List<NewsViewCommand> newsViewCommands = newsMapper.findByTypeAndLang(type, lang, limit);
+		if(null == newsViewCommands){
+			return null;
+		}
+		
+		for (NewsViewCommand newsViewCommand : newsViewCommands) {
+			List<NewsImage> newsImages = newsImageManager.findImageByNewId(newsViewCommand.getId());
+			newsViewCommand.setNewsImages(newsImages);
+		}
+		
+		return newsViewCommands;
 	}
 }

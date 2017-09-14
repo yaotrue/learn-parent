@@ -33,7 +33,7 @@ $(function(){
 		$("#saveNewForm").submit();
 	})
 	
-	$("#cancelBtn").click(function(){
-		$("#saveNewForm")[0].reset();
+	$("#gobackBtn").click(function(){
+		window.location.href = base + '/admin/';
 	})
 })

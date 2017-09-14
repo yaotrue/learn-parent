@@ -1,6 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <!DOCTYPE html>
@@ -35,31 +36,26 @@
 <body>
     <%@include file="/pages/common/logo.jsp"%>
 
-    <div id="main" class="content">
+	<div id="main" class="content">
     	<div class="banner-site">
 			<%@include file="/pages/common/navbar.jsp"%>
 	        <div class="flexslider event-kv">
-	           <ul class="slides">
-	               <li>
-	                   <img src="${base }/resources/images/index/kv.jpg" />
+	        	<ul class="slides">
+					<c:forEach items="${indexKv }" var="kv">
+					<li>
+						<c:forEach items="${kv.newsImages }" var="newImage" begin="0" end="0">
+	                   	<img src="${base }/resources/images/newsimage/${newImage.picUri }" />
+						</c:forEach>
 	                   <div class="txt-info">
 	                       <div>
-	                           <h4>世界风云变化 中国如何应对</h4>
-	                           <p>第一届伦敦中英峰会举行，中外专家共论中国机遇与挑战</p>  
+	                           <h4>${kv.title }</h4>
+	                           <p>${kv.content }</p>  
 	                       </div>
 	                   </div>
-	               </li>
-	               <li>
-	                   <img src="${base }/resources/images/index/kv-2.jpg" />
-	                   <div class="txt-info">
-	                       <div>
-	                           <h4>世界能源-Gate 国际有限公司总裁专访</h4>
-	                           <p>壳牌中国前董事、精品资讯兼投资公司Gate国际有限公司总裁EurIng. Henry K. H. Wang专访</p>  
-	                       </div>
-	                   </div>
-	               </li>
-	           </ul>
-	       </div>
+	               	</li>
+					</c:forEach>        
+	           	</ul>
+	       	</div>
 		</div>
 
         <!-- 峰会新闻 -->
@@ -69,46 +65,23 @@
                 <h5>峰会新闻</h5>
             </div>
             <ul>
-                <li class="fir">
+            	<c:forEach items="${indexNews }" var="news" varStatus="stas">
+            	<li<c:choose><c:when test="${stas.first }"> class="fir"</c:when><c:when test="${stas.last }"> class="thir"</c:when><c:otherwise> class="sec"</c:otherwise></c:choose>>
                     <div>
-                       <a href="${base }/news.htm">
-                            <img src="${base }/resources/images/index/newsbanner01.jpg" />
-                            <h5>江苏省外事办特别报道——第一届伦敦中英峰在伦敦四季酒店成功举行</h5>
-                            <p>由第四届江苏省青年友好使者仇天宇组织的第
-                            一届伦敦中英峰会于2017年2月4日在伦敦四季酒店成功举行。</p>
+                       	<a href="${base }/news.htm">
+                       		<c:forEach items="${news.newsImages }" var="newImage" begin="0" end="0">
+		                   	<img src="${base }/resources/images/newsimage/${newImage.picUri }" />
+							</c:forEach>
+                            <h5>${news.title }</h5>
+                            <p>${news.content }</p>
                         </a>
-                       <!--  <div class="author-info">
-                            <span>Hala Hanna </span>
-                            <span>21/07/2017</span>
-                        </div> -->
+                       	<div class="author-info">
+                            <span>${news.author }</span>
+                            <span><fmt:formatDate value="${news.createTime}" pattern="dd/MM/yyyy" /></span>
+                        </div>
                     </div>
                 </li>
-                <li class="sec">
-                    <div>
-                       <a href="${base }/news.htm?a3">
-                            <img src="${base }/resources/images/index/newsbanner02.jpg" />
-                            <h5>峰会董事会主席及政府联络总监会见大曼彻斯特市长Andy Burnham</h5>
-                            <p>近日，中英峰会董事会主席李宗洋及政府联络总监Hugh Findlay在曼彻斯特会见了大曼彻斯特地区市长Andy Burnham。</p>
-                        </a>
-                        <!-- <div class="author-info">
-                            <span>Hala Hanna </span>
-                            <span>21/07/2017</span>
-                        </div> -->
-                    </div>
-                </li>
-                <li class="thir">
-                    <div>
-                       <a href="${base }/news.htm">
-                            <img src="${base }/resources/images/index/newsbanner03.jpg" />
-                            <h5>中英教育新动态——博实乐教育集团与费得斯公学成功签约</h5>
-                            <p>近日，中国博实乐教育集团与英国“四大公学”之一费得斯公学成功举行了合作签约仪式。</p>
-                        </a>
-                        <!-- <div class="author-info">
-                            <span>Hala Hanna </span>
-                            <span>21/07/2017</span>
-                        </div> -->
-                    </div>
-                </li>
+            	</c:forEach>
             </ul>
             <div class="view-more">
                 <a href="${base }/news.htm">查看更多</a>
@@ -121,31 +94,23 @@
                 <h5>峰会项目</h5>
             </div>
             <ul>
-                <li class="fir">
+            	<c:forEach items="${indexProject }" var="project" varStatus="stas">
+            	<li<c:choose><c:when test="${stas.first }"> class="fir"</c:when><c:when test="${stas.last }"> class="thir"</c:when></c:choose>>
                     <div>
-                       <a href="${base }/project.htm?a1">
-                            <img src="${base }/resources/images/index/blogbanner01.png" />
+                       <a href="${base }/project.htm?a${project.id}">
+                            <c:forEach items="${project.newsImages }" var="newImage" begin="0" end="0">
+		                   	<img src="${base }/resources/images/newsimage/${newImage.picUri }" />
+							</c:forEach>
                         </a>
                         <div class="detail">
-                            <p> 世界能源—壳牌中国前董事Gate国际有限公司总裁专访</p>
-                            <!-- <span>Hala Hanna </span>
-                            <span>21/07/2017</span> -->
+                            <p>${project.title }</p>
+                            <span>${project.author }</span>
+                            <span><fmt:formatDate value="${project.createTime}" pattern="dd/MM/yyyy" /></span>
                         </div>
                     </div>
                 </li>
-                <li class="sec">&nbsp;</li>
-                <li class="thir">
-                    <div>
-                       <a href="${base }/project.htm?a2">
-                            <img src="${base }/resources/images/index/360-s.png" />
-                        </a>
-                        <div class="detail">
-                            <p>360海外广告部总经理专访—品牌定位与海外战略</p>
-                            <!-- <span>Hala Hanna </span>
-                            <span>21/07/2017</span> -->
-                        </div>
-                    </div>
-                </li>
+                <c:if test="${stas.first }"><li class="sec">&nbsp;</li></c:if>
+            	</c:forEach>
             </ul>
             <div class="view-more">
                 <a href="${base }/project.htm">查看更多</a>

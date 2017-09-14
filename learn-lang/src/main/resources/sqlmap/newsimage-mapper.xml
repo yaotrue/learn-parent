@@ -77,6 +77,44 @@
 		FROM
 			t_ma_news_image
 		WHERE
-			new_id = #{newId}
+			news_id = #{newId}
+		ORDER BY sort_no
+  	</select>
+  	
+  	<select id="getMaxSortNo" resultType="Integer">
+  		SELECT
+			max(sort_no)
+		FROM
+			t_ma_news_image
+		WHERE
+			news_id = #{newId}
+  	</select>
+  	
+  	<select id="getDownImage" resultType="NewsImage">
+  		SELECT
+			*
+		FROM
+			t_ma_news_image
+		WHERE
+			sort_no &gt; #{sortNo}
+		AND
+			news_id = #{newId}
+		ORDER BY
+			sort_no
+		LIMIT 1
+  	</select>
+  	
+  	<select id="getUpImage" resultType="NewsImage">
+  		SELECT
+			*
+		FROM
+			t_ma_news_image
+		WHERE
+			sort_no &lt; #{sortNo} 
+		AND
+			news_id = #{newId}
+		ORDER BY
+			sort_no DESC
+		LIMIT 1
   	</select>
 </mapper>

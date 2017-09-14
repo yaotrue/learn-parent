@@ -16,6 +16,9 @@
 package com.yaotrue.web.command;
 
 import java.util.Date;
+import java.util.List;
+
+import com.yaotrue.model.NewsImage;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
@@ -41,6 +44,8 @@ public class NewsViewCommand extends BaseCommand {
 	private Byte type;
 	
 	private Date createTime;
+	
+	private List<NewsImage> newsImages;
 
 	/**
 	 * @return the id
@@ -138,6 +143,20 @@ public class NewsViewCommand extends BaseCommand {
 	 */
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
+	}
+
+	/**
+	 * @return the newsImages
+	 */
+	public List<NewsImage> getNewsImages() {
+		return newsImages;
+	}
+
+	/**
+	 * @param newsImages the newsImages to set
+	 */
+	public void setNewsImages(List<NewsImage> newsImages) {
+		this.newsImages = newsImages;
 	}
 
 }

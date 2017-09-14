@@ -35,6 +35,8 @@ public interface NewsManager {
 	
 	News getByPrimaryKey(Long id);
 	
+	NewCommand getByNewsId(Long newsId);
+	
 	List<News> findNewsByTypeAndCount(Byte type,Integer count);
 	
 	List<News> findByPageAndType(Byte type,Integer start,Integer pageSize);
@@ -42,4 +44,7 @@ public interface NewsManager {
 	void save(NewCommand newCommand);
 	
 	List<NewsViewCommand> findByLang(String lang);
+	
+	List<NewsViewCommand> findByTypeAndLang(Byte type,String lang,Integer limit);
+	
 }

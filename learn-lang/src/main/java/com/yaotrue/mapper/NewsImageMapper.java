@@ -40,4 +40,16 @@ public interface NewsImageMapper {
 	NewsImage getByPrimaryKey(@Param("id") Long id);
 	
 	List<NewsImage> findByNewId(@Param("newId") Long newId);
+
+	/**
+	 * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
+	 * 2017年9月14日 上午12:49:28
+	 * @param newsId
+	 * @return
+	 */
+	Integer getMaxSortNo(@Param("newId") Long newsId);
+	
+	NewsImage getDownImage(@Param("newId") Long newsId,@Param("sortNo") Integer sortNo);
+	
+	NewsImage getUpImage(@Param("newId") Long newsId,@Param("sortNo") Integer sortNo);
 }

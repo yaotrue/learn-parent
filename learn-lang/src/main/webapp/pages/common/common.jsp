@@ -4,3 +4,6 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <c:set var="base" value="${pageContext.request.contextPath }"/>
+<script type="text/javascript">
+var base = '${base}';
+</script>

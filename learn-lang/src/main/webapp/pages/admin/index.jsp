@@ -15,7 +15,9 @@
     <link href="${base }/resources/css/flexslider.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="${base }/resources/css/common.css" />
     <link rel="stylesheet" href="${base }/resources/css/low.css" />
+    <%@include file="/pages/common/common.jsp"%>
     <script src="${base }/resources/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="${base }/resources/js/admin-index.js" type="text/javascript"></script>
     <style type="text/css">
     thead{
     font-size: 15px;
@@ -62,6 +64,7 @@
 						<td>发布人</td>
 						<td>创建时间</td>
 						<td>类型</td>
+						<td>状态</td>
 						<td>操作</td>
 					</tr>
 					</thead>
@@ -92,10 +95,28 @@
 						</c:choose>
 						</td>
 						<td>
-						<a>删除</a>
-						<a>编辑</a>
-						<a>立即发布</a>
-						<a>图片管理</a>
+						<c:choose>
+						<c:when test="${1 == new.status }">
+						初始化
+						</c:when>
+						<c:when test="${2 == new.status }">
+						启用中
+						</c:when>
+						<c:when test="${3 == new.status }">
+						待启用
+						</c:when>
+						</c:choose>
+						</td>
+						<td newsId="${new.id }">
+						<a href="javascript:void(0)" class="deleteNews">删除</a>
+						<a href="${base }/admin/editNew?newId=${new.id }">编辑</a>
+						<c:if test="${new.status == 2 }">
+						<a href="javascript:void(0)" class="newsDown">下线</a>
+						</c:if>
+						<c:if test="${new.status == 1 or new.status == 3 }">
+						<a href="javascript:void(0)" class="newsUp">立即发布</a>
+						</c:if>
+						<a href="${base }/admin/editImage?newId=${new.id}">图片管理</a>
 						</td>
 					</tr>
 					</c:forEach>

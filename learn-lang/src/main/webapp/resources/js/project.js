@@ -48,10 +48,6 @@ $(function() {
     })
 
 
-        var _map = window.location.search.replace('?a', '');
-
-        if (_map <= ($('.myaccount-lf ul li').length - 1)) {
-            $('.myaccount-lf ul li:eq('+ _map +')').trigger('click');
-        }
-
+    var _map = window.location.search.replace('?a', '');
+    $('.myaccount-lf ul li:[id='+_map+']').trigger('click');
 });

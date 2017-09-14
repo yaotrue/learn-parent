@@ -13,35 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yaotrue.mapper;
+package com.yaotrue.manager;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
-import com.yaotrue.model.NewsLang;
+import com.yaotrue.model.NewsImage;
 
 /**
  * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
- * 2017年8月15日 下午9:32:00
+ * 2017年9月14日 上午12:14:07
  */
-public interface NewsLangMapper {
+public interface NewsImageManager {
 
-	void save(NewsLang newsLang);
+	NewsImage save(NewsImage newsImage);
 	
-	void batchSave(@Param("newsLangs")List<NewsLang> newsLangs);
+	List<NewsImage> findImageByNewId(Long newId);
+
+	/**
+	 * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
+	 * 2017年9月14日 上午12:44:32
+	 * @param imageId
+	 */
+	void deleteImage(Long imageId);
 	
-	void update(NewsLang newsLang);
-	
-	void delete(@Param("id") Long id);
-	
-	void deleteByNewId(@Param("newId") Long newId);
-	
-	NewsLang getByPrimaryKey(@Param("id") Long id);
-	
-	NewsLang getByNewIdAndLang(@Param("newId") Long newId,@Param("lang")String lang);
-	
-	List<NewsLang> findByNewId(@Param("newId") Long newId);
-	
-	
+	Integer getMaxSortNo(Long newsId);
+
+	/**
+	 * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
+	 * 2017年9月14日 上午12:54:11
+	 * @param imageId
+	 */
+	void moveImage(Long imageId,Integer type);
 }
