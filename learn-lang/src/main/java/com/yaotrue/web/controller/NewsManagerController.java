@@ -80,7 +80,7 @@ public class NewsManagerController extends BaseController {
 
 	@RequestMapping(value = "/admin/editNew")
 	public String editNew(@RequestParam("newId") Long newId, HttpServletRequest request, Model model) {
-		model.addAttribute("new", newsManager.getByNewsId(newId));
+		model.addAttribute("news", newsManager.getByNewsId(newId));
 		return "/admin/edit-new";
 	}
 	

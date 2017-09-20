@@ -6,6 +6,7 @@
 	left: 0;
 	width: 100%;
 	height: 40%;
+	max-height: 292px;
 	*zoom: 1;
 	background-color: rgba(0,0,0,0.85)!important;
 	background-color: #000;
@@ -144,7 +145,7 @@
     right: 0;
     bottom: 0;
 }
-    
+
 .summit-news ul li div a p{
 	font-size: 12px;
 	line-height: 14px;
@@ -278,7 +279,7 @@
 	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 }
 .member-con{
-	max-width: 1200px; 
+	max-width: 1200px;
 	margin: 0 auto;
 }
 .member-con .member-up{
@@ -395,8 +396,9 @@
 	vertical-align: middle;
 	margin-left: 10px;
 }
+
 .cooper{
-	max-width: 1360px;
+   	max-width: 1360px;
 	margin:  0 auto 171px;
 }
 .cooper h5{
@@ -405,23 +407,31 @@
   font-size: 24px;
   color: #333;
 }
-
-.cooper ul li {
-	font-size: 0;
+.cooper .swiper-box{
+	max-width: 1360px;
+	margin:  0 auto 171px;
+	position: relative;
 }
-.cooper ul li div{
+
+.cooper .swiper-box{
+	position: relative;
+}
+.cooper .swiper-box .swiper-container{
+	margin: 0 36px;
+	position: relative;
+}
+.cooper .swiper-wrapper .swiper-slide{
 	cursor: pointer;
 	display: inline-block;
-	width: 25%;
+	max-width: 25%;
+	text-align: center;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-.cooper-slide{
-	position: relative;
-}
+
 .cooper ul li .fir{
 	padding-right: 39px;
 }
@@ -446,12 +456,24 @@
 .cooper .flex-direction-nav a{
 	top: 45%;
 }
+.swiper-button-prev{
+	background: url(../images/index/arrow-lf.png) no-repeat;
+	background-size: 100% 100%;
+	left: 0;
+	position: absolute;
+}
+.swiper-button-next{
+	background: url(../images/index/arrow-g.png) no-repeat;
+	background-size: 100% 100%;
+	right: 0;
+	position: absolute;
+}
 .flex-direction-nav .flex-prev{
-	background: url(../images/index/arrow-lf.png) no-repeat; 
+	background: url(../images/index/arrow-lf.png) no-repeat;
 	background-size: 100% 100%;
 }
 .flex-direction-nav .flex-next {
-	background: url(../images/index/arrow-g.png) no-repeat; 
+	background: url(../images/index/arrow-g.png) no-repeat;
 	background-size: 100% 100%;
 }
 .cooper .flex-direction-nav .flex-prev{

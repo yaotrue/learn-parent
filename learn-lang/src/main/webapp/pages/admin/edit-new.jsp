@@ -25,11 +25,11 @@
 		<!-- 登录 -->
         <div class="editNew-box">
         	<form action="${base }/admin/saveNew" id="saveNewForm" method="post">
-        	<input type="hidden" name="id" value="${new.id }"/>
+        	<input type="hidden" name="id" value="${news.id }"/>
             <div class="form-group is-error">
                 <label class="control-label">标题中文：</label>
                 <div class="form-input">
-                    <input type="text" placeholder="请输入标题中文" name="title_zh" id="title_zh" value="${new.title_zh }">
+                    <input type="text" placeholder="请输入标题中文" name="title_zh" id="title_zh" value="${news.title_zh }">
                     <!-- <div class="msg-block">
                         <span>用户名错误，请重新输入</span>
                     </div> -->
@@ -38,7 +38,7 @@
             <div class="form-group is-error">
                 <label class="control-label">标题英文：</label>
                 <div class="form-input">
-                    <input type="text" placeholder="请输入标题英文" name="title_en" id="title_en" value="${new.title_en }">
+                    <input type="text" placeholder="请输入标题英文" name="title_en" id="title_en" value="${news.title_en }">
                     <!-- <div class="msg-block">
                         <span>用户名错误，请重新输入</span>
                     </div> -->
@@ -47,7 +47,7 @@
             <div class="form-group is-error">
                 <label class="control-label">内容中文：</label>
                 <div class="form-input">
-                	<textarea rows="10" cols="40" placeholder="请输入内容中文" name="content_zh" id="content_zh">${new.content_zh }</textarea>
+                	<textarea rows="10" cols="40" placeholder="请输入内容中文" name="content_zh" id="content_zh">${news.content_zh }</textarea>
                     <!-- <div class="msg-block">
                         <span>用户名错误，请重新输入</span>
                     </div> -->
@@ -56,7 +56,7 @@
             <div class="form-group is-error">
                 <label class="control-label">内容英文：</label>
                 <div class="form-input">
-                	<textarea rows="10" cols="40" placeholder="请输入内容英文" name="content_en" id="content_en">${new.content_en }</textarea>
+                	<textarea rows="10" cols="40" placeholder="请输入内容英文" name="content_en" id="content_en">${news.content_en }</textarea>
                     <!-- <div class="msg-block">
                         <span>用户名错误，请重新输入</span>
                     </div> -->
@@ -65,7 +65,7 @@
             <div class="form-group is-error">
                 <label class="control-label">发布人中文：</label>
                 <div class="form-input">
-                    <input type="text" placeholder="请输入发布人中文" name="author_zh" id="author_zh" value="${new.author_zh }">
+                    <input type="text" placeholder="请输入发布人中文" name="author_zh" id="author_zh" value="${news.author_zh }">
                     <!-- <div class="msg-block">
                         <span>用户名错误，请重新输入</span>
                     </div> -->
@@ -74,7 +74,7 @@
             <div class="form-group is-error">
                 <label class="control-label">发布人英文：</label>
                 <div class="form-input">
-                    <input type="text" placeholder="请输入发布人英文" name="author_en" id="author_en" value="${new.author_en }">
+                    <input type="text" placeholder="请输入发布人英文" name="author_en" id="author_en" value="${news.author_en }">
                     <!-- <div class="msg-block">
                         <span>用户名错误，请重新输入</span>
                     </div> -->
@@ -84,10 +84,10 @@
                 <label class="control-label">类型：</label>
                 <div class="form-input">
                     <select name="type" id="type">
-                    <option value="1"<c:if test="${new.type == 1 }"> selected="selected"</c:if>>新闻</option>
-                    <option value="2"<c:if test="${new.type == 2 }"> selected="selected"</c:if>>项目</option>
-                    <option value="3"<c:if test="${new.type == 3 }"> selected="selected"</c:if>>日程</option>
-                    <option value="4"<c:if test="${new.type == 4 }"> selected="selected"</c:if>>首页KV</option>
+                    <option value="1"<c:if test="${news.type == 1 }"> selected="selected"</c:if>>新闻</option>
+                    <option value="2"<c:if test="${news.type == 2 }"> selected="selected"</c:if>>项目</option>
+                    <option value="3"<c:if test="${news.type == 3 }"> selected="selected"</c:if>>日程</option>
+                    <option value="4"<c:if test="${news.type == 4 }"> selected="selected"</c:if>>首页KV</option>
                     </select>
                 </div>
             </div>

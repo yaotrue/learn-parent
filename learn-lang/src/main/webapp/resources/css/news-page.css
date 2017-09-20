@@ -61,20 +61,42 @@
 .pages-left .pages-left-info p{
 	font-family: "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 	font-size: 24px;
-	width: 268px;
+	// width: 268px;
 	color: #333333;
 	border-bottom: 1px solid #333333;
 	padding-bottom:8px;
 	margin-bottom: 28px;
 }
-
+.pages-left .pages-left-info div{
+	font-family: "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	font-size: 24px;
+	line-height:24px;
+	// width: 268px;
+	color: #333333;
+	border-bottom: 1px solid #333333;
+	padding-bottom:8px;
+	margin-bottom: 28px;
+}
+.pages-left .pages-left-info div a{
+	color: #333333;
+	display: block;
+}
+.pages-left .pages-left-info div a img{
+	float: right;
+}
 .pages-left .pages-left-info ul li{
 	font-size: 24px;
 	color: #151515;
 	letter-spacing: 0;
 	line-height: 36px;
-	margin-bottom: 36px;
+	padding: 18px 0;
 
+}
+.pages-left .pages-left-info ul li{
+	border-bottom:1px dashed #333333;
+}
+.pages-left .pages-left-info ul li:last-child {
+	border-bottom:0;
 }
 .pages-left .pages-left-info ul li a{
 	color: #151515;
@@ -209,6 +231,23 @@
 	display: inline-block;
 	vertical-align: middle;
 }
+.look-news{
+	font-size: 24px;
+	margin-top:37px;
+	line-height:24px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #333;
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	cursor:pointer;
+}
+.look-news a{
+	color:#333;
+	text-decoration:none;
+	display: block;
+}
+.look-news a img{
+	float: right;
+}
 .info-show i{
 	display: inline-block !important;
 	vertical-align: middle;
@@ -218,7 +257,11 @@
 	font-size: 14px;
 
 }
-
+.pages-cont-r .pages-teme div > p span{
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
 .info-show.is-active{
     width: 100%;
     background: #fff;

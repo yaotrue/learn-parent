@@ -58,7 +58,7 @@ body{
 .myaccount-lf h5{
 	font-size: 24px;
 	color: #333333;
-	width: 268px;
+	// width: 268px;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #333;
 	margin-bottom: 16px;
@@ -67,6 +67,9 @@ body{
 .myaccount-lf ul li.current a{
 	color: #A11E25;
 
+}
+.myaccount-lf ul li{
+	border-bottom:1px dashed #333333;
 }
 .myaccount-lf ul li a{
 	display: block;
@@ -77,12 +80,33 @@ body{
 	position: relative;
 	cursor: pointer;
 	text-decoration: none;
+
+}
+.myaccount-lf ul li:last-child {
+	border-bottom:0;
 }
 .myaccount-lf ul li a img{
 	display: none;
 	position: absolute;
 	left: -14px;
 	top: 27px;
+}
+.look-news{
+	font-size: 24px;
+	margin-top:37px;
+	line-height:24px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #333;
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	cursor:pointer;
+}
+.look-news a{
+	color:#333;
+	text-decoration:none;
+	display: block;
+}
+.look-news a img{
+	float: right;
 }
 .myaccount-rt{
 	float: left;
@@ -116,11 +140,11 @@ body{
 	font-size: 38px;
 	color: #000000;
 	letter-spacing: 0;
-	text-align: center;
+	text-align: left;
 	line-height: 45px;
 }
 .myaccount-rt .ft-box>div .ft-title span{
-	
+
 	display: block;
 	font-size: 12px;
 	color: #8E8E8E;

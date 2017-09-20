@@ -71,52 +71,52 @@
 					<tbody>
 					<c:choose>
 					<c:when test="${not empty news }">
-					<c:forEach var="new" items="${news }">
+					<c:forEach var="eachNew" items="${news }">
 					<tr>
-						<td>${new.title }</td>
-						<td>${new.author }</td>
+						<td>${eachNew.title }</td>
+						<td>${eachNew.author }</td>
 						<td>
-						<fmt:formatDate value="${new.createTime}" pattern="yyyy-MM-dd  HH:mm:ss" />
+						<fmt:formatDate value="${eachNew.createTime}" pattern="yyyy-MM-dd  HH:mm:ss" />
 						</td>
 						<td>
 						<c:choose>
-						<c:when test="${1 == new.type }">
+						<c:when test="${1 == eachNew.type }">
 						新闻
 						</c:when>
-						<c:when test="${2 == new.type }">
+						<c:when test="${2 == eachNew.type }">
 						项目
 						</c:when>
-						<c:when test="${3 == new.type }">
+						<c:when test="${3 == eachNew.type }">
 						日程
 						</c:when>
-						<c:when test="${4 == new.type }">
+						<c:when test="${4 == eachNew.type }">
 						首页KV
 						</c:when>
 						</c:choose>
 						</td>
 						<td>
 						<c:choose>
-						<c:when test="${1 == new.status }">
+						<c:when test="${1 == eachNew.status }">
 						初始化
 						</c:when>
-						<c:when test="${2 == new.status }">
+						<c:when test="${2 == eachNew.status }">
 						启用中
 						</c:when>
-						<c:when test="${3 == new.status }">
+						<c:when test="${3 == eachNew.status }">
 						待启用
 						</c:when>
 						</c:choose>
 						</td>
-						<td newsId="${new.id }">
+						<td newsId="${eachNew.id }">
 						<a href="javascript:void(0)" class="deleteNews">删除</a>
-						<a href="${base }/admin/editNew?newId=${new.id }">编辑</a>
-						<c:if test="${new.status == 2 }">
+						<a href="${base }/admin/editNew?newId=${eachNew.id }">编辑</a>
+						<c:if test="${eachNew.status == 2 }">
 						<a href="javascript:void(0)" class="newsDown">下线</a>
 						</c:if>
-						<c:if test="${new.status == 1 or new.status == 3 }">
+						<c:if test="${eachNew.status == 1 or eachNew.status == 3 }">
 						<a href="javascript:void(0)" class="newsUp">立即发布</a>
 						</c:if>
-						<a href="${base }/admin/editImage?newId=${new.id}">图片管理</a>
+						<a href="${base }/admin/editImage?newId=${eachNew.id}">图片管理</a>
 						</td>
 					</tr>
 					</c:forEach>
