@@ -3,10 +3,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
+<!-- 导航 -->
 <div class="nav-bar">
-	<div class="nav-bar-bg">
-    	<ul>
-        	<li<c:if test="${navbar eq 'index' }"> class="current"</c:if>><a href="${base }/"><spring:message code="navbar.index"/></a></li>
+    <div class="nav-bar-bg">
+       <ul>
+            <li<c:if test="${navbar eq 'index' }"> class="current"</c:if>><a href="${base }/"><spring:message code="navbar.index"/></a></li>
 	        <li<c:if test="${navbar eq 'news' }"> class="current"</c:if>><a href="${base }/news.htm"><spring:message code="navbar.news"/></a></li>
 	        <li<c:if test="${navbar eq 'project' }"> class="current"</c:if>><a href="${base }/project.htm"><spring:message code="navbar.project"/></a></li>
 	        <li<c:if test="${navbar eq 'schedule' }"> class="current"</c:if>><a href="${base }/schedule.htm"><spring:message code="navbar.richeng"/></a></li>

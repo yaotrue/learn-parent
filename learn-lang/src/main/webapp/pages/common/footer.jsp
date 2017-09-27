@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
+<!-- footer -->
 <div class="footer">
     <div class="back-top event-top">
         <img src="${base }/resources/images/index/top.png" height="40" />
@@ -31,10 +32,11 @@
         </div>
     </div>
     <div class="fot-botm">
-        <p>© 2017 Sino-British Summit 中英峰会</p>
-        <a href="${base }/policy.htm">隐私政策</a>|<a href="${base }/low.htm">法律声明</a>
+        <p><spring:message code="footer.cqsy"/></p>
+        <a href="${base }/policy.htm" title=""><spring:message code="footer.yszc"/></a>|<a href="${base }/low.htm" title=""><spring:message code="footer.flsm"/></a>
     </div>
 </div>
+
 <script>
 var _hmt = _hmt || [];
 (function() {

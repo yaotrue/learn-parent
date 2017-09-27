@@ -11,8 +11,9 @@
     <title>峰会项目</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <link href="${base }/resources/css/main.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="${base }/resources/css/common.css" />
+	<link rel="stylesheet" href="${base }/resources/css/common.css" />
+    <%-- <link href="${base }/resources/css/main.css" rel="stylesheet" type="text/css" /> --%>
+
     <link href="${base }/resources/css/flexslider.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="${base }/resources/css/project.css">
     <script src="${base }/resources/js/jquery-1.7.2.min.js" type="text/javascript"></script>
@@ -47,9 +48,9 @@
         <!-- 面包屑 -->
         <div class="breadcrumb">
             <ul class="list-inline">
-                <li><a href="${base }/">中英峰会</a></li>
+                <li><a href="${base }/"><spring:message code="mbx.index"/></a></li>
                 <li class="divider">&gt;</li>
-                <li><a href="${base }/project.htm">峰会项目</a></li>
+                <li><a href="${base }/project.htm"><spring:message code="mbx.project"/></a></li>
             </ul>
         </div>
         <!-- 标题 -->
@@ -57,16 +58,16 @@
             <div class="tit">
                 <div>
                    <span>&nbsp;</span>
-                    <h5>峰会项目</h5>
+                    <h5><spring:message code="mbx.project"/></h5>
                 </div>
-                <p>中英峰会专题项目报道</p>
+                <p><spring:message code="project.jianjie"/></p>
             </div>
         </div>
         <!-- 内容 -->
 		<div class="myaccount-inner clearfix">
           	<div>
             	<div class="myaccount-lf">
-                  	<h5>近期峰会项目一览</h5>
+                  	<h5><spring:message code="project.jqxm"/></h5>
                   	<ul>
 						<c:forEach items="${allProject }" var="project" varStatus="stas">
                       		<li id="${project.id }"<c:if test="${stas.first }"> class="current"</c:if>><a><img src="${base }/resources/images/page/arrow-d.png">${project.title }</a></li>
@@ -79,7 +80,7 @@
                   		<div>
                     		<div class="flexslider event-kv">
                       			<ul class="slides">
-                      				<c:forEach items="${project.newsImages }" var="newImage">
+                      				<c:forEach items="${project.newsImages }" var="newImage" begin="1">
                           			<li>
                               			<img src="${base }/resources/images/newsimage/${newImage.picUri }" />
                           			</li>
@@ -97,27 +98,6 @@
                 	</div>
                 	</c:forEach>
               	</div>
-          	</div>
-          	<div class="fh-interview events-fh-interview">
-	            <ul>
-	            	<%--项目只会一定只会有三个？如果多于三个或者少于三个怎么显示 --%>
-	            	<c:forEach items="${allProject }" var="project" varStatus="stas">
-	                <li data-index="${stas.index+1 }" class="fir<c:if test="${stas.first }"> none</c:if>">
-	                    <div>
-	                       <a href="##">
-	                            <c:forEach items="${project.newsImages }" var="newImage" begin="0" end="0">
-			                   	<img src="${base }/resources/images/newsimage/${newImage.picUri }" />
-								</c:forEach>
-	                        </a>
-	                        <div class="detail">
-	                            <p>${project.title }</p>
-	                            <span>${project.author }</span>
-	                            <span><fmt:formatDate value="${project.createTime}" pattern="dd/MM/yyyy" /></span>
-	                        </div>
-	                    </div>
-	                </li>
-	                </c:forEach>
-	            </ul>
           	</div>
         </div>
 

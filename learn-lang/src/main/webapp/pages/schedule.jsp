@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>峰会日程</title>
+    <title><spring:message code="mbx.rc"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="${base }/resources/css/common.css" />
@@ -32,9 +32,9 @@
         <!-- 面包屑 -->
         <div class="breadcrumb">
             <ul class="list-inline">
-                <li><a href="${base }/">中英峰会</a></li>
+                <li><a href="${base }/"><spring:message code="mbx.index"/></a></li>
                 <li class="divider">&gt;</li>
-                <li><a href="${base }/schedule.htm">峰会日程</a></li>
+                <li><a href="${base }/schedule.htm"><spring:message code="mbx.rc"/></a></li>
             </ul>
         </div>
 
@@ -42,15 +42,15 @@
             <div class="tit">
                 <div>
                    <span>&nbsp;</span>
-                    <h5>峰会日程</h5>
+                    <h5><spring:message code="mbx.rc"/></h5>
                 </div>
-                <p>了解中英峰会会议活动的课题内容</p>
+                <p><spring:message code="schedule.jianjie"/></p>
             </div>
 
         </div>	
         <div class="myaccount-inner clearfix">
             <div class="myaccount-lf">
-                <h5>近期峰会日程安排</h5>
+                <h5><spring:message code="schedule.jqap"/></h5>
                 <ul>
                 	<c:forEach items="${allSchedule }" var="schedule" varStatus="stas">
                     	<li><a href="#schedule${stas.index+1 }"><img src="${base }/resources/images/page/arrow-d.png">${schedule.title }</a></li>
@@ -60,7 +60,7 @@
             <div class="myaccount-rt">
                 <div>
                     <div class="myaccount-down team-down">
-                    	<c:forEach items="${allSchedule }" var="schedule" varStatus="sats">
+                    	<c:forEach items="${allSchedule }" var="schedule" varStatus="stas">
                     	<div class="team-member clearfix">
                            	<div class="team-cont-l" >
                               	<div>
@@ -70,8 +70,13 @@
                               	</div>
                               	<div class="pages-img evens-pages-img">
                                 	<ul>
-                                  		<c:forEach items="${schedule.newsImages }" var="newImage" varStatus="stas">
-                                      	<li class="<c:choose><c:when test="${stas.first }">padd-right</c:when><c:when test="${stas.last }">padd-center</c:when></c:choose><c:if test="${stas.first }"> active</c:if>">
+                                  		<c:forEach items="${schedule.newsImages }" var="newImage" varStatus="imgstas">
+                                      	<li class="
+                                      	<c:choose><c:when test="${imgstas.index == 0 or imgstas.index == 3 or imgstas.index == 6 or imgstas.index == 9 }">padd-right</c:when>
+                                      	<c:when test="${imgstas.index == 1 or imgstas.index == 4 or imgstas.index == 7 or imgstas.index == 10 }">padd-center</c:when>
+                                      	<c:when test="${imgstas.index == 2 or imgstas.index == 5 or imgstas.index == 8 or imgstas.index == 11 }">padd-left</c:when>
+                                      	</c:choose>
+                                      	<c:if test="${imgstas.first }"> active</c:if>">
                                         	<img data-select="false" src="${base }/resources/images/newsimage/${newImage.picUri }" data-src="${base }/resources/images/newsimage/${newImage.picUri }">
                                       	</li>
 										</c:forEach> 
