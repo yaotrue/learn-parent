@@ -1,5 +1,11 @@
 SET SESSION FOREIGN_KEY_CHECKS=0;
 
+/* Drop Indexes */
+
+DROP INDEX T_MA_NEWS_LANG_NEWLANG ON t_ma_news_lang;
+
+
+
 /* Drop Tables */
 
 DROP TABLE IF EXISTS t_ma_news_image;
@@ -40,12 +46,19 @@ CREATE TABLE t_ma_news_lang
 	id bigint NOT NULL AUTO_INCREMENT COMMENT 'ID',
 	new_id bigint COMMENT '新闻、博客ID',
 	title mediumtext COMMENT '标题',
+	intro mediumtext COMMENT '简介',
 	content mediumtext COMMENT '内容',
 	author varchar(200) COMMENT '发布人',
 	create_time timestamp COMMENT '创建时间',
 	lang varchar(100) COMMENT '语言值',
 	PRIMARY KEY (id)
 ) COMMENT = '新闻、博客多语言表';
+
+
+
+/* Create Indexes */
+
+CREATE INDEX T_MA_NEWS_LANG_NEWLANG ON t_ma_news_lang (new_id ASC, lang ASC);
 
 
 
