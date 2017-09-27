@@ -10,6 +10,16 @@ $(function(){
 			return false;
 		}
 		
+		if($("#intro_zh").val() == ''){
+			alert('简介中文不能为空！');
+			return false;
+		}
+		
+		if($("#intro_en").val() == ''){
+			alert('简介英文不能为空！');
+			return false;
+		}
+		
 		if($("#content_zh").val() == ''){
 			alert('内容中文不能为空！');
 			return false;

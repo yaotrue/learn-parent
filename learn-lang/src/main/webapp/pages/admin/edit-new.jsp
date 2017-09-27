@@ -44,6 +44,19 @@
                     </div> -->
                 </div>
             </div>
+            
+            <div class="form-group is-error">
+                <label class="control-label">简介中文：</label>
+                <div class="form-input">
+                    <input type="text" placeholder="请输入简介中文" name="intro_zh" id="intro_zh" value="${news.intro_zh }">
+                </div>
+            </div>
+            <div class="form-group is-error">
+                <label class="control-label">简介英文：</label>
+                <div class="form-input">
+                    <input type="text" placeholder="请输入简介英文" name="intro_en" id="intro_en" value="${news.intro_en }">
+                </div>
+            </div>
             <div class="form-group is-error">
                 <label class="control-label">内容中文：</label>
                 <div class="form-input">
@@ -87,7 +100,7 @@
                     <option value="1"<c:if test="${news.type == 1 }"> selected="selected"</c:if>>新闻</option>
                     <option value="2"<c:if test="${news.type == 2 }"> selected="selected"</c:if>>项目</option>
                     <option value="3"<c:if test="${news.type == 3 }"> selected="selected"</c:if>>日程</option>
-                    <option value="4"<c:if test="${news.type == 4 }"> selected="selected"</c:if>>首页KV</option>
+                    <option value="4"<c:if test="${news.type == 4 }"> selected="selected"</c:if>>头条新闻</option>
                     </select>
                 </div>
             </div>

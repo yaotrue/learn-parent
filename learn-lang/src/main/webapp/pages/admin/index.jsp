@@ -61,6 +61,7 @@
 					<thead>
 					<tr>
 						<td>标题</td>
+						<td>简介</td>
 						<td>发布人</td>
 						<td>创建时间</td>
 						<td>类型</td>
@@ -74,6 +75,7 @@
 					<c:forEach var="eachNew" items="${news }">
 					<tr>
 						<td>${eachNew.title }</td>
+						<td>${eachNew.intro }</td>
 						<td>${eachNew.author }</td>
 						<td>
 						<fmt:formatDate value="${eachNew.createTime}" pattern="yyyy-MM-dd  HH:mm:ss" />
@@ -122,7 +124,7 @@
 					</c:forEach>
 					</c:when>
 					<c:otherwise>
-					<tr><td colspan="5" align="center">暂无文章</td></tr>
+					<tr><td colspan="6" align="center">暂无文章</td></tr>
 					</c:otherwise>
 					</c:choose>
 					</tbody>
