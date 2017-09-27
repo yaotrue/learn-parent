@@ -60,6 +60,7 @@
 			news.create_time,
 			lang.title,
 			lang.content,
+			lang.intro,
 			lang.author
 		FROM
 			t_ma_news news
@@ -70,9 +71,33 @@
 		AND STATUS = 2
 		ORDER BY
 			news.create_time
+		DESC
 		<if test="limit != null and limit!=''">
 		LIMIT #{limit}
 		</if>
+  	</select>
+  	
+  	<select id="findByTypesAndLang" resultType="NewsViewCommand">
+  		SELECT
+			news.id,
+			news.create_time,
+			news.type,
+			lang.title,
+			lang.content,
+			lang.intro,
+			lang.author
+		FROM
+			t_ma_news news
+		LEFT JOIN t_ma_news_lang lang ON news.id = lang.new_id
+		AND lang.lang = #{lang}
+		WHERE
+			type IN 
+		<foreach collection="types" item ="type" open="(" close=")" separator=",">
+			#{type }
+		</foreach>
+		AND STATUS = 2
+		ORDER BY
+			news.type,news.create_time DESC
   	</select>
   	
   	<select id="findByPageAndType" resultType="News">
@@ -96,6 +121,7 @@
 			n.status,
 			n.type,
 			nl.author,
+			nl.intro,
 			nl.content,
 			nl.title
 		FROM

@@ -37,8 +37,8 @@ public class News implements Serializable {
 	/**类型：日程*/
 	public static final Byte TYPE_SCHEDULE = 3;
 	
-	/**类型：首页KV*/
-	public static final Byte TYPE_INDEX_KV = 4;
+	/**类型：头条新闻*/
+	public static final Byte TYPE_HEADERLINE_NEWS = 4;
 	
 	/**状态：初始化*/
 	public static final Byte STATUS_INIT = 1;

@@ -43,4 +43,13 @@ public interface NewsMapper {
 	List<NewsViewCommand> findByLang(@Param("lang") String lang);
 	
 	List<NewsViewCommand> findByTypeAndLang(@Param("type") Byte type,@Param("lang") String lang,@Param("limit")Integer limit);
+
+	/**
+	 * @author <a href="mailto:yaotrue@163.com">yaotrue</a>
+	 * 2017年9月23日 上午9:21:35
+	 * @param type
+	 * @param lang
+	 * @return
+	 */
+	List<NewsViewCommand> findByTypesAndLang(@Param("types") List<Byte> type,@Param("lang")  String lang);
 }

@@ -37,6 +37,8 @@ public class NewsViewCommand extends BaseCommand {
 	
 	private String content;
 	
+	private String intro;
+	
 	private String author;
 	
 	private Byte status;
@@ -87,6 +89,20 @@ public class NewsViewCommand extends BaseCommand {
 	 */
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	/**
+	 * @return the intro
+	 */
+	public String getIntro() {
+		return intro;
+	}
+
+	/**
+	 * @param intro the intro to set
+	 */
+	public void setIntro(String intro) {
+		this.intro = intro;
 	}
 
 	/**

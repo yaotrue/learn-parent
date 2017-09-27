@@ -35,6 +35,9 @@ public class NewsLang implements Serializable {
 
 	/** 标题 */
 	private String title;
+	
+	/** 简介*/
+	private String intro;
 
 	/** 内容 */
 	private String content;
@@ -91,6 +94,20 @@ public class NewsLang implements Serializable {
 	 */
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	/**
+	 * @return the intro
+	 */
+	public String getIntro() {
+		return intro;
+	}
+
+	/**
+	 * @param intro the intro to set
+	 */
+	public void setIntro(String intro) {
+		this.intro = intro;
 	}
 
 	/**

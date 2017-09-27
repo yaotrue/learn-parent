@@ -47,4 +47,6 @@ public interface NewsManager {
 	
 	List<NewsViewCommand> findByTypeAndLang(Byte type,String lang,Integer limit);
 	
+	List<NewsViewCommand> findByTypesAndLang(List<Byte> type,String lang);
+	
 }

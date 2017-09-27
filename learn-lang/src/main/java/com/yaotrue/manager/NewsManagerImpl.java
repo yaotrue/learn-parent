@@ -106,10 +106,12 @@ public class NewsManagerImpl implements NewsManager {
 				newCommand.setAuthor_zh(newsLang.getAuthor());
 				newCommand.setContent_zh(newsLang.getContent());
 				newCommand.setTitle_zh(newsLang.getTitle());
+				newCommand.setIntro_zh(newsLang.getIntro());
 			}else if(LangUtil.EN_US.equals(newsLang.getLang())){
 				newCommand.setAuthor_en(newsLang.getAuthor());
 				newCommand.setContent_en(newsLang.getContent());
 				newCommand.setTitle_en(newsLang.getTitle());
+				newCommand.setIntro_en(newsLang.getIntro());
 			}
 		}
 		
@@ -158,6 +160,7 @@ public class NewsManagerImpl implements NewsManager {
 		newsLang.setContent(newCommand.getContent_zh());
 		newsLang.setNewId(news.getId());
 		newsLang.setTitle(newCommand.getTitle_zh());
+		newsLang.setIntro(newCommand.getIntro_zh());
 		newsLang.setLang(LangUtil.ZH_CN);
 		newsLangs.add(newsLang);
 		
@@ -166,6 +169,7 @@ public class NewsManagerImpl implements NewsManager {
 		newsLang2.setContent(newCommand.getContent_en());
 		newsLang2.setNewId(news.getId());
 		newsLang2.setTitle(newCommand.getTitle_en());
+		newsLang2.setIntro(newCommand.getIntro_en());
 		newsLang2.setLang(LangUtil.EN_US);
 		newsLangs.add(newsLang2);			
 		newsLangMapper.batchSave(newsLangs);
@@ -194,6 +198,23 @@ public class NewsManagerImpl implements NewsManager {
 			newsViewCommand.setNewsImages(newsImages);
 		}
 		
+		return newsViewCommands;
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.yaotrue.manager.NewsManager#findByTypesAndLang(java.util.List, java.lang.String)
+	 */
+	@Override
+	public List<NewsViewCommand> findByTypesAndLang(List<Byte> type, String lang) {
+		List<NewsViewCommand> newsViewCommands = newsMapper.findByTypesAndLang(type, lang);
+		if(null == newsViewCommands){
+			return null;
+		}
+		
+		for (NewsViewCommand newsViewCommand : newsViewCommands) {
+			List<NewsImage> newsImages = newsImageManager.findImageByNewId(newsViewCommand.getId());
+			newsViewCommand.setNewsImages(newsImages);
+		}
 		return newsViewCommands;
 	}
 }

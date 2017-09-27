@@ -30,6 +30,10 @@ public class NewCommand extends BaseCommand {
 	private String title_zh;
 
 	private String title_en;
+	
+	private String intro_zh;
+
+	private String intro_en;
 
 	private String content_zh;
 
@@ -84,6 +88,34 @@ public class NewCommand extends BaseCommand {
 	 */
 	public void setTitle_en(String title_en) {
 		this.title_en = title_en;
+	}
+
+	/**
+	 * @return the intro_zh
+	 */
+	public String getIntro_zh() {
+		return intro_zh;
+	}
+
+	/**
+	 * @param intro_zh the intro_zh to set
+	 */
+	public void setIntro_zh(String intro_zh) {
+		this.intro_zh = intro_zh;
+	}
+
+	/**
+	 * @return the intro_en
+	 */
+	public String getIntro_en() {
+		return intro_en;
+	}
+
+	/**
+	 * @param intro_en the intro_en to set
+	 */
+	public void setIntro_en(String intro_en) {
+		this.intro_en = intro_en;
 	}
 
 	/**

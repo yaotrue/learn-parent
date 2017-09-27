@@ -15,6 +15,9 @@
  */
 package com.yaotrue.web.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -42,15 +45,15 @@ public class IndexController extends BaseController {
 	@RequestMapping("/")
 	public String indexPage(Model model, HttpServletRequest request) {
 		LOG.debug("into index page");
-		// 查询首页KV
-		model.addAttribute("indexKv", newsManager.findByTypeAndLang(News.TYPE_INDEX_KV,
-				RequestContextUtils.getLocale(request).toString(), null));
+		// 查询最新的三篇头条新闻
+		model.addAttribute("headerlineNews", newsManager.findByTypeAndLang(News.TYPE_HEADERLINE_NEWS,
+				RequestContextUtils.getLocale(request).toString(), 3));
 
-		// 查询最新的三篇新闻
+		// 查询最新的三篇峰会新闻
 		model.addAttribute("indexNews",
 				newsManager.findByTypeAndLang(News.TYPE_NEWS, RequestContextUtils.getLocale(request).toString(), 3));
 
-		// 查询最新的两篇项目
+		// 查询最新的两篇峰会项目
 		model.addAttribute("indexProject",
 				newsManager.findByTypeAndLang(News.TYPE_PROJECT, RequestContextUtils.getLocale(request).toString(), 2));
 
@@ -72,7 +75,7 @@ public class IndexController extends BaseController {
 
 	@RequestMapping("/project.htm")
 	public String project(Model model,HttpServletRequest request) {
-		// 查询所有的项目
+		// 查询所有的峰会项目
 		model.addAttribute("allProject",
 				newsManager.findByTypeAndLang(News.TYPE_PROJECT, RequestContextUtils.getLocale(request).toString(), null));
 		model.addAttribute("navbar", "project");
@@ -81,7 +84,7 @@ public class IndexController extends BaseController {
 
 	@RequestMapping("/schedule.htm")
 	public String schedule(Model model,HttpServletRequest request) {
-		// 查询所有的日程
+		// 查询所有的峰会日程
 		model.addAttribute("allSchedule",
 				newsManager.findByTypeAndLang(News.TYPE_SCHEDULE, RequestContextUtils.getLocale(request).toString(), null));
 		model.addAttribute("navbar", "schedule");
@@ -90,11 +93,31 @@ public class IndexController extends BaseController {
 
 	@RequestMapping("/news.htm")
 	public String news(Model model,HttpServletRequest request) {
-		// 查询所有的新闻
+		// 查询最新的五篇峰会新闻
 		model.addAttribute("allNews",
-				newsManager.findByTypeAndLang(News.TYPE_NEWS, RequestContextUtils.getLocale(request).toString(), null));
+				newsManager.findByTypeAndLang(News.TYPE_NEWS, RequestContextUtils.getLocale(request).toString(), 5));
 		model.addAttribute("navbar", "news");
 		return "news";
+	}
+	
+	@RequestMapping("/recent-news.htm")
+	public String recentNews(Model model,HttpServletRequest request) {
+		List<Byte> types = new ArrayList<>();
+		types.add(News.TYPE_NEWS);
+		types.add(News.TYPE_HEADERLINE_NEWS);
+		// 查询所有的新闻（包含头条新闻和峰会新闻）
+		model.addAttribute("allNews",
+				newsManager.findByTypesAndLang(types, RequestContextUtils.getLocale(request).toString()));
+		model.addAttribute("navbar", "news");
+		return "recent-news";
+	}
+	
+	@RequestMapping("/headline-news.htm")
+	public String headlineNews(Model model,HttpServletRequest request) {
+		// 查询前三篇头条新闻
+		model.addAttribute("headerlineNews",
+				newsManager.findByTypeAndLang(News.TYPE_HEADERLINE_NEWS, RequestContextUtils.getLocale(request).toString(), 3));
+		return "headerline-news";
 	}
 
 	@RequestMapping("/low.htm")
