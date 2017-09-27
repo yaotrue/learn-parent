@@ -95,6 +95,9 @@
 	-o-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
+.summit-news ul li div a div{
+	min-height:98px;
+}
 .summit-news ul li.fir{
 	padding-right: 3%;
 }
@@ -308,6 +311,7 @@
 	text-align: center;
 	font-size: 24px;
 	margin: 14px 0 10px;
+	font-family:"Times New Roman","Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 }
 .member-con .site{
 	text-align: center;

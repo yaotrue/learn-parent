@@ -4,7 +4,7 @@
 	body {
 		color: #2E2E2E;
 		font-size: 12px;
-		font-family: "Times New Roman","Arial","STSongti-SC-Regular","PingFangSC-Regular","宋体","SimSun",  "微软雅黑", "Microsoft YaHei", "sans-serif";
+		font-family:"Arial","STSongti-SC-Regular","PingFangSC-Regular","宋体","SimSun",  "微软雅黑", "Microsoft YaHei", "sans-serif";
 		letter-spacing: 0px;
 		margin: 0;
 		padding: 0;
@@ -37,7 +37,7 @@
 	}
 	input,
 	textarea {
-		font-family: "Times New Roman", "Arial","STSongti-SC-Regular","PingFangSC-Regular","宋体","SimSun",  "微软雅黑", "Microsoft YaHei", "sans-serif";
+		font-family: "Arial","STSongti-SC-Regular","PingFangSC-Regular","宋体","SimSun",  "微软雅黑", "Microsoft YaHei", "sans-serif";
 		outline: none;
 	}
 	img{
@@ -83,6 +83,7 @@
 	position: absolute;
 	left: 20px;
 	top: 20px;
+	font-family:  "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 }
 .logo .switch-email{
 	position: absolute;
@@ -155,7 +156,7 @@
 	position: relative;
 	height: 55px;
 	display: inline-block;
-	font-family: "Times New Roman","Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
+	font-family: "Arial","PingFangSC-Regular", "微软雅黑", "Microsoft YaHei", "sans-serif";
 }
 .nav-bar ul li.current a:before{
 	content: "";
